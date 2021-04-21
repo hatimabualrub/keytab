@@ -1,0 +1,129 @@
+/*Start Mid section*/
+.back {
+    background-image: url(../../images/BackGround.jpg);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+  }
+  
+  .mid-text {
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    padding-bottom: 30px;
+  }
+  
+  .mid-text h1 {
+    color: #272727;
+    font-size: 3.7rem;
+    width: 40%;
+  }
+  .mid-text h1 span {
+    color: #f86014;
+  }
+  .mid-text p {
+    color: #272727;
+    font-size: 1.3rem;
+    width: 70%;
+    margin-top: -1.3rem;
+  }
+  
+  .mid-text .btn {
+    margin-top: 3rem;
+    cursor: pointer;
+  }
+  
+  .big-btn {
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #f86014;
+    color: #ffffff;
+    padding: 0.7rem 1.9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  /*End Mid section*/
+  
+  /*start features section */
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 10%;
+    box-shadow: 0px 3px 5px #949494;
+    margin-bottom: 1rem;
+  }
+  
+  .details .feature {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .details .feature i {
+    font-size: 2rem;
+    padding-right: 0.7rem;
+    color: #f86014;
+  }
+  .details .feature p {
+    width: 80%;
+    color: #272727;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .details .feature p span {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  /*End features section */
+  /*Start How To sextion*/
+  .how-to {
+    background-color: #fffaf7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 8rem;
+  }
+  .how-to .h2 {
+    font-size: 2.2rem;
+    color: #272727;
+    font-weight: 700;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #f86014;
+  }
+  .how-to .Menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .how-to .Menu .step {
+    height: auto;
+    box-sizing: border-box;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .how-to .Menu .step .icon i {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #f86014;
+    padding-bottom: 10px;
+  }
+  
+  .how-to .Menu .step .para p {
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    font-weight: bold;
+  }
+  /*End how to*/

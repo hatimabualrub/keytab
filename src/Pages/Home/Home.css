@@ -1,0 +1,586 @@
+/*Start second section*/
+.second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fbfaf8;
+    color: var(--sec-color);
+  }
+  .second-section .welcome {
+    width: 49%;
+    margin-top: -0.5rem;
+  }
+  .second-section .welcome h1 {
+    font-size: 4rem;
+  }
+  .second-section .welcome h1 span {
+    color: var(--main-color);
+  }
+  .second-section .welcome p {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .second-section .presonal-info {
+    width: 49%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .second-section .presonal-info .container {
+    padding: 0 0 10px 10px;
+  
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0.4px 0.5px rgba(0, 0, 0, 0.056),
+      0 0.9px 1.3px rgba(0, 0, 0, 0.081), 0 1.8px 2.4px rgba(0, 0, 0, 0.1),
+      0 3.1px 4.2px rgba(0, 0, 0, 0.119), 0 5.8px 7.9px rgba(0, 0, 0, 0.144),
+      0 14px 19px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding-left: 1rem;
+  }
+  .second-section .presonal-info .container h4 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+  .second-section .presonal-info .container .grade {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1rem 1rem 1rem;
+    font-size: 1.3rem;
+    color: var(--sec-color);
+  }
+  .second-section .presonal-info .container .grade p {
+    padding-bottom: 10px;
+  }
+  .second-section .presonal-info select {
+    width: 20%;
+    margin: 0 10px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid var(--main-color);
+  }
+  
+  .second-section .presonal-info .container a {
+    color: var(--main-color);
+    font-size: 1.3rem;
+    text-align: right;
+  }
+  /*End second section*/
+  
+  /*Start Subjects section */
+  .subjects {
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+  .subjects h1 {
+    width: 100%;
+    font-size: 3rem;
+    color: var(--sec-color);
+  }
+  
+  .subjects .courses {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .subjects .courses .course {
+    width: 20%;
+    margin-right: 1rem;
+  }
+  .subjects .courses .course .img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .subjects .courses .course .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2px 0px 10px 5px;
+  }
+  
+  .subjects .courses .course .details h4 {
+    font-size: 1.5rem;
+    color: var(--sec-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .subjects .courses .course .details p {
+    color: var(--sec-color);
+  }
+  .subjects .courses .course .details .rating {
+    padding-bottom: 1rem;
+  }
+  .subjects .courses .course .details .rating span {
+    color: var(--fourth-color);
+    font-weight: bold;
+    margin-right: 0.2rem;
+  }
+  .subjects .courses .course .details .rating .stars {
+    display: inline;
+    list-style: none;
+  }
+  .subjects .courses .course .details .rating .stars li {
+    display: inline-block;
+  }
+  .subjects .courses .course .details .rating .stars li i {
+    font-size: 0.8rem;
+    color: var(--fourth-color);
+  }
+  .subjects .courses .course .details .rating .rate {
+    color: var(--sec-color);
+    font-weight: 400;
+  }
+  
+  /*End Subjects section */
+  
+  
+  /*media */
+  @media screen and (max-width: 1378px) {
+    /* Start navbar */
+  
+    .nav .logo img {
+      width: 6rem;
+    }
+    .nav .search {
+      width: 10%;
+      position: relative;
+      margin-right: 10rem;
+    }
+  
+    .nav .buttons #items {
+      padding: 0px 44px;
+    }
+  
+    .nav .buttons #items li {
+      list-style: none;
+      margin-left: 0.9rem;
+      font-size: 1.2rem;
+    }
+    /*End NavBar */
+  
+    /*Start second section*/
+    .second-section {
+      padding: 2rem;
+    }
+    .second-section .welcome {
+      width: 49%;
+      margin-top: -4rem;
+    }
+    .second-section .welcome h1 {
+      font-size: 2.6rem;
+    }
+  
+    .second-section .welcome p {
+      font-size: 1.5rem;
+    }
+  
+    .second-section .presonal-info .container {
+      padding: 0 0 8px 8px;
+    }
+    .second-section .presonal-info .container h4 {
+      margin-top: 0.9rem;
+      font-size: 1.3rem;
+    }
+    .second-section .presonal-info .container .grade {
+      padding: 1rem 1rem 1rem 1rem;
+      font-size: 1.1rem;
+    }
+  
+    .second-section .presonal-info select {
+      border-bottom: 1.5px solid var(--main-color);
+    }
+  
+    .second-section .presonal-info .container a {
+      font-size: 1.1rem;
+    }
+    /*End second section*/
+  
+    /*Start Subjects section */
+    .subjects {
+      padding: 0.8rem 2rem;
+    }
+    .subjects h1 {
+      font-size: 2rem;
+    }
+  
+    .subjects .courses .course {
+      margin-right: 0.8rem;
+    }
+  
+    .subjects .courses .course .details h4 {
+      font-size: 1.2rem;
+    }
+  
+    .subjects .courses .course .details .rating {
+      padding-bottom: 0.5rem;
+    }
+    .subjects .courses .course .details .rating span {
+      margin-right: 0.1rem;
+      font-size: 0.8rem;
+    }
+  
+    .subjects .courses .course .details .rating .stars li i {
+      font-size: 0.7rem;
+    }
+  
+    /*End Subjects section */
+  }
+  
+  @media screen and (max-width: 1042px) {
+    /* Start navbar */
+    .nav .search {
+      margin-right: 0rem;
+    }
+  
+    .nav .buttons #items li {
+      list-style: none;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+    }
+  
+    .nav .buttons .bar i {
+      font-size: 1.4rem;
+    }
+    /*End NavBar */
+  
+    /*Start second section*/
+    .second-section {
+      padding: 2rem;
+    }
+    .second-section .welcome {
+      width: 49%;
+      margin-top: -4rem;
+    }
+    .second-section .welcome h1 {
+      font-size: 2.6rem;
+    }
+  
+    .second-section .welcome p {
+      font-size: 1.5rem;
+    }
+  
+    .second-section .presonal-info .container {
+      padding: 0 0 8px 8px;
+    }
+    .second-section .presonal-info .container h4 {
+      margin-top: 0.9rem;
+      font-size: 1.3rem;
+    }
+    .second-section .presonal-info .container .grade {
+      padding: 1rem 1rem 1rem 1rem;
+      font-size: 1.1rem;
+    }
+  
+    .second-section .presonal-info select {
+      border-bottom: 1.5px solid var(--main-color);
+    }
+  
+    .second-section .presonal-info .container a {
+      font-size: 1.1rem;
+    }
+    /*End second section*/
+  
+    /*Start Subjects section */
+    .subjects h1 {
+      font-size: 2rem;
+    }
+  
+    .subjects .courses .course {
+      width: 20%;
+      margin-right: 0.7rem;
+    }
+  
+    .subjects .courses .course .details {
+      padding: 2px 0px 8px 5px;
+    }
+  
+    .subjects .courses .course .details h4 {
+      font-size: 1rem;
+      padding-bottom: 0.4rem;
+    }
+    .subjects .courses .course .details p {
+      font-size: 0.8rem;
+    }
+  
+    .subjects .courses .course .details .rating {
+      padding-bottom: 0.8rem;
+    }
+    .subjects .courses .course .details .rating span {
+      margin-right: 0rem;
+      font-size: 0.7rem;
+    }
+    .subjects .courses .course .details .rating .stars li {
+      margin-right: -0.2rem;
+    }
+    .subjects .courses .course .details .rating .stars li i {
+      font-size: 0.7rem;
+      color: var(--fourth-color);
+    }
+    .subjects .courses .course .details .rating .rate {
+      font-weight: 400;
+    }
+  
+    /*End Subjects section */
+  }
+  
+  @media screen and (max-width: 991px) {
+    /*one change on navbar */
+    .nav .search {
+      margin-left: 0rem;
+    }
+  
+    /*Start Subjects section */
+    .subjects h1 {
+      font-size: 2.5rem;
+    }
+  
+    /*End Subjects section */
+  }
+  
+  @media screen and (max-width: 850px) {
+    /*one change on navbar */
+  
+    .nav .search {
+      margin-left: 3rem;
+    }
+  
+    /*Start Subjects section */
+    .subjects h1 {
+      font-size: 1.8rem;
+    }
+  
+    .subjects .courses .course .details h4 {
+      font-size: 0.8rem;
+    }
+  
+    /*End Subjects section */
+    .subjects .courses .course .details p {
+      font-size: 0.6rem;
+    }
+    .subjects .courses .course .details .rating span {
+      font-size: 0.6rem;
+    }
+  }
+  
+  @media screen and (max-width: 626px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 5rem;
+      margin-left: 380%;
+    }
+  
+    .nav .search input {
+      margin-right: 0rem;
+      display: none;
+    }
+  
+    .nav .search i {
+      font-size: 1.4rem;
+      top: -0.7rem;
+      left: -6rem;
+      color: var(--ther-color);
+    }
+  
+    .nav .buttons #items li {
+      display: none;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.4rem;
+      display: inline;
+    }
+    /*Start second section*/
+    .second-section {
+      padding: 1.8rem;
+    }
+    .second-section .welcome {
+      width: 49%;
+      margin-top: -5rem;
+    }
+    .second-section .welcome h1 {
+      font-size: 2rem;
+    }
+  
+    .second-section .welcome p {
+      font-size: 1.2rem;
+    }
+  
+    .second-section .presonal-info .container {
+      padding: 0 0 6px 6px;
+    }
+    .second-section .presonal-info .container h4 {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+    }
+    .second-section .presonal-info .container .grade {
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+  
+    .second-section .presonal-info .container a {
+      font-size: 1rem;
+    }
+    /*End second section*/
+  
+    /*Start Subjects section */
+    .subjects h1 {
+      font-size: 1.2rem;
+    }
+  
+    .subjects .courses .course {
+      margin-right: 0.3rem;
+    }
+  
+    .subjects .courses .course .details {
+      padding: 2px 0px 6px 3px;
+    }
+  
+    .subjects .courses .course .details h4 {
+      font-size: 0.6rem;
+      padding-bottom: 0.2rem;
+    }
+    .subjects .courses .course .details p {
+      font-size: 0.5rem;
+    }
+  
+    .subjects .courses .course .details .rating {
+      padding-bottom: 0.8rem;
+    }
+    .subjects .courses .course .details .rating span {
+      margin-right: -0.2rem;
+      font-size: 0.5rem;
+    }
+    .subjects .courses .course .details .rating .stars li {
+      margin-right: -0.2rem;
+    }
+    .subjects .courses .course .details .rating .stars li i {
+      font-size: 0.5rem;
+    }
+    /*End Subjects section */
+  }
+  
+  @media screen and (max-width: 496px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 5rem;
+      margin-left: 351%;
+    }
+  
+    .nav .search input {
+      margin-right: 0rem;
+      display: none;
+    }
+  
+    .nav .search i {
+      font-size: 1.5rem;
+      top: -0.7rem;
+      left: -4.5rem;
+      color: var(--ther-color);
+    }
+  
+    .nav .buttons #items li {
+      display: none;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.5rem;
+      display: inline;
+    }
+    /*End NavBar */
+  
+    /*Start second section*/
+    .second-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1.5rem;
+    }
+    .second-section .welcome {
+      width: 100%;
+      margin-top: -1rem;
+    }
+    .second-section .welcome h1 {
+      font-size: 2.5rem;
+    }
+  
+    .second-section .welcome p {
+      font-size: 1.6rem;
+    }
+    .second-section .presonal-info {
+      width: 100%;
+    }
+  
+    .second-section .presonal-info .container {
+      padding-left: 0rem;
+      padding: 1rem 0 0 1.5rem;
+      margin-top: 3rem;
+    }
+    .second-section .presonal-info .container h4 {
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: -1.5rem;
+    }
+    .second-section .presonal-info .container .grade {
+      font-size: 1.1rem;
+    }
+  
+    .second-section .presonal-info .container a {
+      font-size: 1.2rem;
+    }
+    /*End second section*/
+  
+    /*Start Subjects section */
+    .subjects {
+      /*didn't change*/
+      padding: 1rem 2rem;
+      width: 100%;
+    }
+    .subjects h1 {
+      font-size: 1.8rem;
+    }
+  
+    .subjects .courses {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .subjects .courses .course {
+      width: 100%;
+      margin-right: 0rem;
+    }
+  
+    .subjects .courses .course .details {
+      /*didn't change*/
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 2px 0px px 5px;
+    }
+  
+    .subjects .courses .course .details h4 {
+      font-size: 1.4rem;
+    }
+    .subjects .courses .course .details p {
+      font-size: 0.9rem;
+    }
+    .subjects .courses .course .details .rating span {
+      margin-right: 0rem;
+      font-size: 0.8rem;
+    }
+  
+    .subjects .courses .course .details .rating .stars li i {
+      font-size: 0.7rem;
+    }
+    .subjects .courses .course .details .rating .rate {
+      font-size: 0.9rem;
+    }
+  
+    /*End Subjects section */
+  }
