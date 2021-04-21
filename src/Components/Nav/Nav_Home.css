@@ -1,0 +1,75 @@
+/* Start navbar */
+.nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    box-shadow: 0px 3px 5px #949494;
+  }
+  
+  .nav .logo {
+    width: 10%;
+  }
+  .nav .logo img {
+    width: 7rem;
+  }
+  .nav .search {
+    width: 10%;
+    position: relative;
+    margin-right: 20rem;
+  }
+  .nav .search i {
+    position: absolute;
+    top: 0.4rem;
+    left: 1rem;
+    color: var(--sec-color);
+  }
+  
+  .nav input {
+    padding: 0.3rem 3rem;
+    border-radius: 15px;
+    border: 1px solid var(--ther-color);
+  }
+  .nav input:focus {
+    outline: none;
+  }
+  .nav .buttons {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav .buttons #items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 64px;
+    align-items: center;
+  }
+  
+  .nav .buttons #items li {
+    list-style: none;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .nav .buttons #items li a {
+    color: var(--sec-color);
+  }
+  .nav .buttons #items li .active {
+    color: var(--main-color);
+  }
+  
+  .nav .buttons .bar i {
+    font-size: 1.5rem;
+    color: var(--ther-color);
+    margin-right: 0.7rem;
+  }
+  /*End NavBar */

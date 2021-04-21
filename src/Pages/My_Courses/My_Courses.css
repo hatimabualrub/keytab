@@ -1,0 +1,528 @@
+
+  /*Start second section*/
+  .second-section {
+    background-color: #fbfaf8;
+    padding: 1rem 2rem;
+    color: var(--sec-color);
+  }
+  
+  .second-section h1 {
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+  }
+  
+  .second-section .en-created {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .second-section .en-created p {
+    margin-right: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+  }
+  .pactive {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+  /*End second section */
+  
+  /*Sort by */
+  .enrolled-courses {
+    padding: 3rem;
+    color: var(--sec-color);
+  }
+  .enrolled-courses .selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .enrolled-courses .selection div {
+    margin-right: 2rem;
+  }
+  
+  .select-box h4 {
+    margin-bottom: 1.5rem;
+  }
+  .color {
+    padding: 0.5rem;
+    background-color: #fcf8f8;
+  }
+  
+  .select-box div .para {
+    display: inline-block;
+    margin-right: 0.8rem;
+  }
+  .select-box div i {
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  .select-box div {
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .enrolled-courses .selection .reset {
+    margin-top: 4rem;
+    font-weight: bold;
+  }
+  .courses {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .courses .course {
+    width: 20%;
+    margin-right: 1rem;
+  }
+  .courses .course .img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .courses .course .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2px 0px 10px 5px;
+  }
+  .courses .course .details h4 {
+    font-size: 1.5rem;
+    color: var(--sec-color);
+    padding-bottom: 0.5rem;
+  }
+  .courses .course .details p {
+    color: var(--sec-color);
+  }
+  .courses .course .details .rating {
+    padding-bottom: 1rem;
+  }
+  .courses .course .details .rating span {
+    color: var(--fourth-color);
+    font-weight: bold;
+    margin-right: 0.2rem;
+  }
+  .courses .course .details .rating .stars {
+    display: inline;
+    list-style: none;
+  }
+  .courses .course .details .rating .stars li {
+    display: inline-block;
+  }
+  .courses .course .details .rating .stars li i {
+    font-size: 0.8rem;
+    color: var(--fourth-color);
+  }
+  .courses .course .details .rating .rate {
+    color: var(--sec-color);
+    font-weight: 400;
+  }
+  /*End sort by */
+  
+  /* Start Footer */
+  .footer {
+    border-top: 0.5px solid #7f8c8d;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .footer p {
+    color: #7f8c8d;
+  }
+  .footer ul {
+    color: #7f8c8d;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer ul li {
+    padding: 0px 2px;
+  }
+  /*End Footer*/
+  
+  /* media query */
+  @media screen and (max-width: 1378px) {
+    /* Start navbar */
+  
+    .nav .logo img {
+      width: 6rem;
+    }
+    .nav .search {
+      width: 10%;
+      position: relative;
+      margin-right: 10rem;
+    }
+  
+    .nav .buttons #items {
+      padding: 0px 44px;
+    }
+  
+    .nav .buttons #items li {
+      list-style: none;
+      margin-left: 0.9rem;
+      font-size: 1.2rem;
+    }
+    /*End NavBar */
+  
+    /* Start sort by*/
+  
+    .courses .course {
+      width: 20%;
+      margin-right: 1rem;
+    }
+  
+    .courses .course .details h4 {
+      font-size: 1.3rem;
+      padding-bottom: 0.4rem;
+    }
+  
+    .courses .course .details .rating {
+      padding-bottom: 0.8rem;
+    }
+    /*End sort by */
+  }
+  
+  @media screen and (max-width: 1042px) {
+    /* Start navbar */
+  
+    .nav .logo img {
+      width: 5.5rem;
+    }
+    .nav .search {
+      margin-right: 0rem;
+    }
+  
+    .nav .buttons #items li {
+      font-size: 1.1rem;
+    }
+    /*End NavBar */
+  
+    /* Start sort by*/
+    .courses .course {
+      width: 20%;
+      margin-right: 0.4rem;
+    }
+  
+    .courses .course .details h4 {
+      font-size: 1rem;
+    }
+  
+    .courses .course .details .rating {
+      padding-bottom: 0.7rem;
+    }
+    /*End sort by */
+  }
+  
+  @media screen and (max-width: 735px) {
+    /* Start navbar */
+  
+    .nav .logo img {
+      width: 5rem;
+    }
+    .nav .search {
+      margin-right: -4rem;
+    }
+    .nav input {
+      padding: 0.2rem 2.2rem;
+    }
+    .nav .search i {
+      font-size: 0.8rem;
+      top: 0.5rem;
+      left: 0.9rem;
+    }
+  
+    .nav .buttons #items li {
+      font-size: 0.9rem;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.3rem;
+    }
+  
+    /*End NavBar */
+  
+    /*Start second section*/
+    .second-section {
+      padding: 0.8rem 1.8rem;
+    }
+  
+    .second-section h1 {
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+    }
+  
+    .second-section .en-created p {
+      margin-right: 1.6rem;
+      font-size: 0.9rem;
+    }
+    /*End second section */
+  
+    /* Start sort by*/
+    .enrolled-courses {
+      padding: 1.5rem;
+    }
+    .enrolled-courses .selection {
+      margin-bottom: 2rem;
+    }
+    .enrolled-courses .selection div {
+      margin-right: 1rem;
+    }
+  
+    .select-box h4 {
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+    }
+    .select-box div .para {
+      font-size: 0.7rem;
+    }
+    .select-box div i {
+      font-size: 0.8rem;
+    }
+    .courses .course .details h4 {
+      font-size: 0.7rem;
+    }
+    .courses .course .details p {
+      font-size: 0.6rem;
+    }
+    .courses .course .details .rating {
+      padding-bottom: 0.4rem;
+    }
+    .courses .course .details .rating span {
+      font-size: 0.7rem;
+      margin-right: -0.2rem;
+    }
+    .courses .course .details .rating .stars li i {
+      font-size: 0.5rem;
+      color: var(--fourth-color);
+    }
+    /*End sort by */
+  
+    /* Start Footer */
+    .footer {
+      padding: 0.4rem 0.5rem;
+    }
+    .footer p {
+      color: #7f8c8d;
+      font-size: 0.8rem;
+    }
+  
+    /*End Footer*/
+  }
+  
+  @media screen and (max-width: 553px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 4.5rem;
+    }
+    .nav .search {
+      margin-right: -3rem;
+    }
+    .nav input {
+      padding: 0rem 0 0 1rem;
+    }
+    .nav input::placeholder {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+    .nav .search i {
+      font-size: 0.7rem;
+      top: 0.3rem;
+      left: 0.5rem;
+    }
+  
+    .nav .buttons #items li {
+      font-size: 0.8rem;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.2rem;
+    }
+    /*End NavBar */
+  
+    /*Start second section*/
+    .second-section {
+      padding: 0.5rem 1.3rem;
+    }
+  
+    .second-section h1 {
+      margin-bottom: 2.7rem;
+      font-size: 1.8rem;
+    }
+  
+    .second-section .en-created p {
+      margin-right: 1rem;
+      font-size: 0.7rem;
+    }
+    /*End second section */
+  
+    /* Start sort by*/
+    .enrolled-courses {
+      padding: 1rem;
+    }
+    .enrolled-courses .selection {
+      margin-bottom: 2rem;
+    }
+    .enrolled-courses .selection div {
+      margin-right: 1rem;
+    }
+  
+    .select-box h4 {
+      margin-bottom: 1.5rem;
+    }
+  
+    .select-box div i {
+      font-size: 0.8rem;
+    }
+    .enrolled-courses .selection .reset {
+      font-size: 0.7rem;
+    }
+    .courses .course .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1px 0 0 2px;
+    }
+    .courses .course .details h4 {
+      font-size: 0.57rem;
+    }
+    .courses .course .details p {
+      font-size: 0.48rem;
+    }
+    .courses .course .details .rating {
+      padding-bottom: 0.3rem;
+    }
+    .courses .course .details .rating span {
+      font-size: 0.5rem;
+      margin-right: -0.1rem;
+    }
+    .courses .course .details .rating .stars li {
+      margin-left: -0.1rem;
+    }
+    .courses .course .details .rating .stars li i {
+      font-size: 0.3rem;
+    }
+    /*End sort by */
+  
+    /* Start Footer */
+    .footer {
+      padding: 0.3rem 0.4rem;
+    }
+    .footer p {
+      color: #7f8c8d;
+      font-size: 0.6rem;
+    }
+    .footer .social li i {
+      font-size: 0.7rem;
+    }
+    /*End Footer*/
+  }
+  
+  @media screen and (max-width: 465px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 5rem;
+      margin-left: 351%;
+    }
+  
+    .nav .search input {
+      margin-right: 0rem;
+      display: none;
+    }
+  
+    .nav .search i {
+      font-size: 1.5rem;
+      top: -0.7rem;
+      left: -4.5rem;
+      color: var(--ther-color);
+    }
+  
+    .nav .buttons #items li {
+      display: none;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.5rem;
+    }
+    /*End NavBar */
+  
+    /*Sort by */
+    .enrolled-courses {
+      padding: 1.5rem;
+    }
+    .enrolled-courses .selection {
+      margin-bottom: 2.4rem;
+    }
+    .enrolled-courses .selection div {
+      margin-right: 0.9rem;
+    }
+  
+    .select-box h4 {
+      margin-bottom: 1rem;
+    }
+    .color {
+      padding: 0.2rem;
+    }
+  
+    .select-box div .para {
+      display: inline-block;
+      margin-right: 0.8rem;
+    }
+    .select-box div i {
+      color: var(--main-color);
+      cursor: pointer;
+    }
+    .select-box div {
+      padding-bottom: 0.4rem;
+    }
+  
+    .enrolled-courses .selection .reset {
+      margin-top: 3rem;
+    }
+    .courses {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .courses .course {
+      width: 90%;
+      margin-right: -2rem;
+      margin-bottom: 1.5rem;
+    }
+    .courses .course .img img {
+      width: 90%;
+    }
+  
+    .courses .course .details h4 {
+      font-size: 1.4rem;
+      color: var(--sec-color);
+      padding-bottom: 0.5rem;
+    }
+    .courses .course .details p {
+      font-size: 1rem;
+    }
+    .courses .course .details .rating {
+      padding-bottom: 0.8rem;
+    }
+    .courses .course .details .rating span {
+      margin-right: 0rem;
+      font-size: 0.8rem;
+    }
+  
+    .courses .course .details .rating .stars li i {
+      font-size: 0.7rem;
+      color: var(--fourth-color);
+    }
+    .courses .course .details .rating .rate {
+      color: var(--sec-color);
+      font-weight: 400;
+    }
+    .courses .course .details .price {
+      font-size: 0.9rem;
+    }
+    /*End sort by */
+  }

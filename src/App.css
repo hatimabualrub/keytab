@@ -1,0 +1,360 @@
+:root {
+    --main-color: #f86014;
+    --sec-color: #272727;
+    --ther-color: #6b6b6b;
+    --fourth-color: #eb8a2f;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+  }
+  body {
+    color: var(--sec-color);
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+  a {
+    text-decoration: none;
+  }
+  .gold-stars {
+    color: var(--fourth-color);
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+  
+  
+  /*---Media Query --*/
+  @media screen and (max-width: 1518px) {
+    .nav .search {
+      width: 10%;
+      position: relative;
+      margin-right: 5rem;
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    .nav .search {
+      width: 10%;
+      position: relative;
+      margin-right: 0rem;
+    }
+    .details {
+      padding: 3rem 0%;
+    }
+  }
+  
+  @media screen and (max-width: 958px) {
+    .nav .search {
+      margin-right: -4rem;
+    }
+    /*Start How To sextion*/
+    .how-to {
+      align-items: center;
+      padding: 4rem 6rem;
+    }
+    .how-to .h2 {
+      font-size: 2rem;
+    }
+  
+    .how-to .Menu .step {
+      padding: 40px 50px;
+    }
+  
+    .how-to .Menu .step .icon i {
+      font-size: 4rem;
+    }
+  
+    .how-to .Menu .step .para p {
+      font-size: 1.2rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 886px) {
+    .mid-text {
+      position: absolute;
+      top: 10%;
+    }
+  
+    .mid-text h1 {
+      color: #272727;
+      font-size: 3.2rem;
+      width: 40%;
+    }
+  
+    .mid-text p {
+      color: #272727;
+      font-size: 1.1rem;
+    }
+  
+    .big-btn {
+      font-size: 1.3rem;
+    }
+    /*End Mid section*/
+    .details {
+      padding: 3rem 0 3rem 2rem;
+    }
+    .details .feature {
+      width: 33%;
+      justify-content: flex-end;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Start Nav Bar*/
+    .nav {
+      padding: 0rem 0.9rem;
+    }
+  
+    .nav .logo img {
+      width: 5rem;
+    }
+  
+    .nav .search i {
+      top: 0.6rem;
+      font-size: 0.8rem;
+    }
+  
+    .nav .search input {
+      padding: 0.2rem 2rem;
+    }
+  
+    .nav .buttons #items {
+      padding: 0px 0px;
+    }
+  
+    .nav .buttons #items li {
+      margin-left: 0.4rem;
+    }
+  
+    .small-signup-btn,
+    .small-login-btn {
+      font-size: 0.8rem;
+    }
+  
+    /* End Nav Bar*/
+  
+    .mid-text {
+      top: 15%;
+    }
+    .mid-text h1 {
+      color: #272727;
+      font-size: 2.8rem;
+      width: 40%;
+    }
+  
+    .mid-text p {
+      color: #272727;
+      font-size: 1rem;
+    }
+  
+    .big-btn {
+      font-size: 1.2rem;
+    }
+    /*End Mid section*/
+  
+    /*start features section */
+  
+    .details .feature i {
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+    }
+  
+    .details .feature p {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .details .feature p span {
+      font-size: 0.8rem;
+    }
+    /*End features section */
+  
+    /*Start How To sextion*/
+    .how-to .h2 {
+      font-size: 1.8rem;
+    }
+  
+    .how-to .Menu .step {
+      padding: 30px 40px;
+    }
+  
+    .how-to .Menu .step .icon i {
+      font-size: 3rem;
+    }
+  
+    .how-to .Menu .step .para p {
+      font-size: 1.1rem;
+    }
+  }
+  @media screen and (max-width: 558px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 5rem;
+      margin-left: 390%;
+    }
+  
+    .nav .search input {
+      margin-right: 0rem;
+      display: none;
+    }
+  
+    .nav .search i {
+      font-size: 1.5rem;
+      top: -0.7rem;
+      left: -6rem;
+      color: var(--ther-color);
+    }
+  
+    .nav .buttons #items li {
+      display: none;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.5rem;
+      display: inline;
+    }
+    /*End NavBar */
+    .back {
+      height: 35vh;
+    }
+    .mid-text {
+      top: 7%;
+    }
+    .mid-text h1 {
+      font-size: 2.2rem;
+    }
+  
+    .mid-text p {
+      font-size: 0.9rem;
+    }
+  
+    .big-btn {
+      font-size: 1rem;
+    }
+    /*End Mid section*/
+  
+    /*start features section */
+  
+    .details .feature i {
+      font-size: 1.4rem;
+    }
+  
+    .details .feature p {
+      font-size: 0.7rem;
+    }
+    .details .feature p span {
+      font-size: 0.6rem;
+    }
+    /*End features section */
+  
+    /*Start How To sextion*/
+    .how-to .h2 {
+      font-size: 1.8rem;
+    }
+  
+    .how-to .Menu .step {
+      padding: 30px 40px;
+    }
+  
+    .how-to .Menu .step .icon i {
+      font-size: 3rem;
+    }
+  
+    .how-to .Menu .step .para p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 496px) {
+    /* Start navbar */
+    .nav .logo img {
+      width: 5rem;
+      margin-left: 351%;
+    }
+  
+    .nav .search input {
+      margin-right: 0rem;
+      display: none;
+    }
+  
+    .nav .search i {
+      font-size: 1.5rem;
+      top: -0.7rem;
+      left: -4.5rem;
+      color: var(--ther-color);
+    }
+  
+    .nav .buttons #items li {
+      display: none;
+    }
+    .nav .buttons .bar i {
+      font-size: 1.5rem;
+      display: inline;
+    }
+    /*End NavBar */
+    /*Start Mid section*/
+    .back {
+      height: 35vh;
+    }
+  
+    .mid-text {
+      top: 10%;
+      padding-bottom: 30px;
+    }
+  
+    .mid-text h1 {
+      color: #272727;
+      font-size: 1.6rem;
+    }
+  
+    .mid-text p {
+      font-size: 1rem;
+      margin-top: 0rem;
+    }
+  
+    .mid-text .btn {
+      margin-top: 2rem;
+    }
+  
+    .big-btn {
+      padding: 0.2rem 1rem;
+      font-size: 1.1rem;
+    }
+    /*End Mid section*/
+  
+    /*start features section */
+    .details {
+      display: none;
+    }
+  
+    /*Start How To sextion*/
+    .how-to {
+      align-items: center;
+      padding: 1.5rem 1rem;
+    }
+    .how-to .h2 {
+      font-size: 1.4rem;
+    }
+    .how-to .Menu {
+      flex-direction: column;
+    }
+    .how-to .Menu .step {
+      padding: 30px 0px;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .how-to .Menu .step .icon i {
+      font-size: 2.7rem;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    .how-to .Menu .step .para p {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+  }

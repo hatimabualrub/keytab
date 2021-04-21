@@ -1,0 +1,28 @@
+/* Start Footer */
+.footer {
+    border-top: 0.5px solid #7f8c8d;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer p {
+    color: #7f8c8d;
+  }
+  .footer ul {
+    color: #7f8c8d;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer ul li {
+    padding: 0px 2px;
+  }
+  /*End Footer*/
+    /* Start Footer */
+    .footer {
+        padding: 0.8rem 0.8rem;
+      }
+    
+      /*End Footer*/
