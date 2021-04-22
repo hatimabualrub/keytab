@@ -1,338 +1,292 @@
 .login {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.login h1 {
+  width: 100%;
+  color: #f86014;
+  font-size: 3.5rem;
+}
+.login p:first-of-type {
+  color: var(--ther-color);
+  font-weight: bold;
+  margin: -2rem 0 2rem 0;
+}
+
+.login p:first-of-type span {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.login label {
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: var(--sec-color);
+  margin-bottom: 0.6rem;
+}
+
+.login input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #b6b1b1;
+}
+
+.login input::placeholder {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.login input:focus {
+  outline: none;
+  border: 1px solid var(--ther-color);
+}
+.eye {
+  width: 100%;
+}
+.login i {
+  position: absolute;
+  bottom: 6.3rem;
+  right: 1.8px;
+  background-color: #dadada;
+  padding: 0.94rem 1rem;
+  border-radius: 8px;
+  color: var(--main-color);
+}
+.login .para {
+  width: 100%;
+}
+.login .para p {
+  margin: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  padding: 0 1.5rem;
+}
+.hidden {
+  visibility: hidden;
+}
+.login button {
+  width: 100%;
+  padding: 12px;
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.login button:hover {
+  background-color: var(--fourth-color);
+}
+
+/*media */
+@media screen and (max-width: 1500px) {
+  .nav .search {
+    width: 10%;
+    position: relative;
+    margin-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 1042px) {
+  .nav .search {
+    width: 10%;
+    position: relative;
+    margin-right: 0rem;
+  }
+
+  .login {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
   }
-  
+
   .login h1 {
-    width: 100%;
-    color: #f86014;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .login p:first-of-type {
-    color: var(--ther-color);
-    font-weight: bold;
-    margin: -2rem 0 2rem 0;
+    margin: -1.5rem 0 2rem 0;
   }
-  
-  .login p:first-of-type span {
-    color: var(--main-color);
-    cursor: pointer;
-  }
-  
+
   .login label {
-    font-size: 1.5rem;
-    font-weight: 550;
-    color: var(--sec-color);
-    margin-bottom: 0.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
   }
-  
+
   .login input {
     width: 100%;
-    padding: 0.9rem 1rem;
-    margin-bottom: 0.8rem;
-    border-radius: 10px;
-    border: 1px solid #b6b1b1;
+    padding: 0.7rem 0.6rem;
+    margin-bottom: 0.7rem;
   }
-  
+
   .login input::placeholder {
-    font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  
-  .login input:focus {
-    outline: none;
-    border: 1px solid var(--ther-color);
-  }
-  .eye {
-    width: 100%;
-  }
+
   .login i {
-    position: absolute;
-    bottom: 6.3rem;
-    right: 1.8px;
-    background-color: #dadada;
-    padding: 0.94rem 1rem;
-    border-radius: 8px;
-    color: var(--main-color);
+    bottom: 6.2rem;
+    right: 1.2px;
+    padding: 0.79rem 1rem;
+    font-size: medium;
   }
-  .login .para {
-    width: 100%;
-  }
+
   .login .para p {
-    margin: 0.6rem 0.8rem;
+    margin: 0.8rem;
     font-size: 0.9rem;
     padding: 0 1.5rem;
   }
-  .hidden {
-    visibility: hidden;
-  }
+
   .login a {
-    width: 100%;
-    padding: 12px;
-    text-decoration: none;
-    background-color: var(--main-color);
-    color: #ffffff;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav .search {
+    width: 10%;
+    position: relative;
+    margin-right: -4rem;
+  }
+  /* End Nav Bar*/
+  .login i {
+    bottom: 6.2rem;
+    right: 1.2px;
+    padding: 0.79rem 1rem;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav .search {
+    width: 10%;
+    position: relative;
+    margin-right: -5rem;
+  }
+  /* End Nav Bar*/
+  .login i {
+    bottom: 7.1rem;
+    right: 1.2px;
+    padding: 0.79rem 1rem;
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 656px) {
+  /* Start navbar */
+  .nav .logo img {
+    width: 5rem;
+    margin-left: 390%;
+  }
+
+  .nav .search input {
+    margin-right: 0rem;
+    display: none;
+  }
+
+  .nav .search i {
     font-size: 1.5rem;
+    top: -0.7rem;
+    left: -7rem;
+    color: var(--ther-color);
   }
-  
-  /* Start Footer */
-  .footer {
-    border-top: 0.5px solid #7f8c8d;
-    padding: 1rem 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: -3rem;
+
+  .nav .buttons #items li {
+    display: none;
+  }
+  .nav .buttons .bar i {
+    font-size: 1.5rem;
+    display: inline;
+  }
+  /*End NavBar */
+}
+
+@media screen and (max-width: 496px) {
+  /* Start navbar */
+  .nav .logo img {
+    width: 5rem;
+    margin-left: 351%;
+  }
+
+  .nav .search input {
+    margin-right: 0rem;
+    display: none;
+  }
+
+  .nav .search i {
+    font-size: 1.5rem;
+    top: -0.7rem;
+    left: -4.5rem;
+    color: var(--ther-color);
+  }
+
+  .nav .buttons #items li {
+    display: none;
+  }
+  .nav .buttons .bar i {
+    font-size: 1.5rem;
+    display: inline;
+  }
+  /*End NavBar */
+
+  .login {
     position: absolute;
-    top: 100%;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .footer p {
-    color: #7f8c8d;
+
+  .login h1 {
+    font-size: 2rem;
   }
-  .footer ul {
-    color: #7f8c8d;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  .login p:first-of-type {
+    margin: -1rem 0 1.3rem 0;
+    font-size: 0.8rem;
   }
-  .footer ul li {
-    padding: 0px 2px;
+
+  .login label {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
   }
-  /*End Footer*/
-  
-  /*media */
-  @media screen and (max-width: 1500px) {
-    .nav .search {
-      width: 10%;
-      position: relative;
-      margin-right: 0rem;
-    }
+
+  .login input {
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.7rem;
   }
-  
-  @media screen and (max-width: 1042px) {
-    .nav .search {
-      width: 10%;
-      position: relative;
-      margin-right: 0rem;
-    }
-  
-    .login {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    .login h1 {
-      font-size: 3rem;
-    }
-    .login p:first-of-type {
-      margin: -1.5rem 0 2rem 0;
-    }
-  
-    .login label {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-  
-    .login input {
-      width: 100%;
-      padding: 0.7rem 0.6rem;
-      margin-bottom: 0.7rem;
-    }
-  
-    .login input::placeholder {
-      font-size: 0.9rem;
-    }
-  
-    .login i {
-      bottom: 6.2rem;
-      right: 1.2px;
-      padding: 0.79rem 1rem;
-      font-size: medium;
-    }
-  
-    .login .para p {
-      margin: 0.8rem;
-      font-size: 0.9rem;
-      padding: 0 1.5rem;
-    }
-  
-    .login a {
-      padding: 10px;
-      font-size: 1.4rem;
-    }
-  
-    /* Start Footer */
-    .footer {
-      padding: 0.9rem 0.9rem;
-    }
-    .footer p {
-      font-size: 0.9rem;
-    }
-  
-    /*End Footer*/
+
+  .login input::placeholder {
+    font-size: 0.8rem;
   }
-  
-  @media screen and (max-width: 991px) {
-    .nav .search {
-      width: 10%;
-      position: relative;
-      margin-right: -4rem;
-    }
-    /* End Nav Bar*/
-    .login i {
-      bottom: 6.2rem;
-      right: 1.2px;
-      padding: 0.79rem 1rem;
-      font-size: medium;
-    }
+
+  .login i {
+    bottom: 5.7rem;
+    right: -10px;
+    padding: 0.79rem 1rem;
+    font-size: 0.9rem;
+    background: none;
+    color: var(--ther-color);
   }
-  
-  @media screen and (max-width: 768px) {
-    .nav .search {
-      width: 10%;
-      position: relative;
-      margin-right: -5rem;
-    }
-    /* End Nav Bar*/
-    .login i {
-      bottom: 7.1rem;
-      right: 1.2px;
-      padding: 0.79rem 1rem;
-      font-size: medium;
-    }
+
+  .login .para p {
+    margin: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0 0rem;
+    width: 100%;
   }
-  @media screen and (max-width: 656px) {
-    /* Start navbar */
-    .nav .logo img {
-      width: 5rem;
-      margin-left: 390%;
-    }
-  
-    .nav .search input {
-      margin-right: 0rem;
-      display: none;
-    }
-  
-    .nav .search i {
-      font-size: 1.5rem;
-      top: -0.7rem;
-      left: -7rem;
-      color: var(--ther-color);
-    }
-  
-    .nav .buttons #items li {
-      display: none;
-    }
-    .nav .buttons .bar i {
-      font-size: 1.5rem;
-      display: inline;
-    }
-    /*End NavBar */
+
+  .login a {
+    padding: 10px;
+    font-size: 1.2rem;
   }
-  
-  @media screen and (max-width: 496px) {
-    /* Start navbar */
-    .nav .logo img {
-      width: 5rem;
-      margin-left: 351%;
-    }
-  
-    .nav .search input {
-      margin-right: 0rem;
-      display: none;
-    }
-  
-    .nav .search i {
-      font-size: 1.5rem;
-      top: -0.7rem;
-      left: -4.5rem;
-      color: var(--ther-color);
-    }
-  
-    .nav .buttons #items li {
-      display: none;
-    }
-    .nav .buttons .bar i {
-      font-size: 1.5rem;
-      display: inline;
-    }
-    /*End NavBar */
-  
-    .login {
-      position: absolute;
-      top: 43%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    .login h1 {
-      font-size: 2rem;
-    }
-    .login p:first-of-type {
-      margin: -1rem 0 1.3rem 0;
-      font-size: 0.8rem;
-    }
-  
-    .login label {
-      font-size: 1.4rem;
-      margin-bottom: 0.4rem;
-    }
-  
-    .login input {
-      padding: 0.5rem 0.5rem;
-      margin-bottom: 0.7rem;
-    }
-  
-    .login input::placeholder {
-      font-size: 0.8rem;
-    }
-  
-    .login i {
-      bottom: 5.7rem;
-      right: -10px;
-      padding: 0.79rem 1rem;
-      font-size: 0.9rem;
-      background: none;
-      color: var(--ther-color);
-    }
-  
-    .login .para p {
-      margin: 0.5rem;
-      font-size: 0.7rem;
-      padding: 0 0rem;
-      width: 100%;
-    }
-  
-    .login a {
-      padding: 10px;
-      font-size: 1.2rem;
-    }
-  
-    /* Start Footer */
-    .footer {
-      padding: 0.6rem 0.7rem;
-    }
-  
-    .footer ul i {
-      font-size: 0.9rem;
-    }
-    .footer p {
-      font-size: 0.7rem;
-    }
-  
-    /*End Footer*/
-  }
+}
