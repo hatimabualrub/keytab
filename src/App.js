@@ -1,21 +1,27 @@
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
-import Course_View from "./Pages/Course_View/Course_View";
-import First from './Pages/First/First';
+import MainCourses from "./Pages/MainCourses/MainCourses";
+import Main from './Pages/Main/Main';
 import Home from './Pages/Home/Home';
-import My_Courses from "./Pages/My_Courses/My_Courses";
+import MyCourses from "./Pages/MyCourses/MyCourses";
 import LogIn from './Pages/LogIn/LogIn';
 import SignIn from './Pages/SignIn/SignIn';
+import Nav from "./Components/Nav/NavMain";
+import NAV from './Components/Nav/NavHome';
 
 function App() {
   return <div>
-    {/*<First />*/}
+    <Nav />
+
+    {/*<NAV />*/}
+
+    {/*<Main />*/}
 
     {/*<Home />*/}
 
-    {/*<My_Courses />*/}
+    {/*<MyCourses />*/}
 
-    <Course_View /> 
+    <MainCourses />
 
     {/*<LogIn />*/}
 

@@ -1,21 +1,18 @@
-import Navbar from '../../Components/Nav/Nav_First';
-import Mid from './Mid_sec';
+import Mid from './MidSec';
 import Details from './details';
 import HowTo from './HowTo';
-import './First.css';
+import './Main.css';
 
 const Home = () => {
     return ( 
-       <div>
-            <Navbar />
-
+       <>
             <Mid />
             
             <Details />
             
             <HowTo /> 
             
-      </div> 
+      </> 
      );
 }
  

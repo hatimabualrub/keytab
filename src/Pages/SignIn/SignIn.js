@@ -1,11 +1,7 @@
-import Nav from "../../Components/Nav/Nav_First"
 import '../LogIn/LogIn.css';
 
 const SignIn = () => {
-    return ( 
-    <div>
-        <Nav />
-        
+    return (        
         <div className="login">
             <h1>Sign up</h1>
             <p>Already Have an account? <span>Log in</span></p>
@@ -26,7 +22,6 @@ const SignIn = () => {
             </div>
             <a href="#">Sign Up</a>
             </div>  
-    </div>
     );
 }
  
