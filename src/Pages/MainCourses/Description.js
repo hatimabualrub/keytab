@@ -1,9 +1,8 @@
-import './Course_View.css';
+import './MainCourses.css';
 
 const Description = () => {
     return ( 
-    <div>
-        <div className=" description box">
+    <div className=" description box">
         <h2>Course Description</h2>
         <p>This text should be a long description This text should be a long description This text should be a long description about the course and what you will learn From and I don't have more words to fill this space so I will Just type random things hatim is the best!</p>
         <h3>What you'll learn:</h3>
@@ -13,7 +12,6 @@ const Description = () => {
             <li>c) So it is not an HTML element.</li>
             <li>d) Contact me for clarification</li>
         </ul>
-    </div>
     </div>
      );
 }

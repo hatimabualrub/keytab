@@ -1,4 +1,4 @@
-import '../Course_View.css';
+import '../MainCourses.css';
 import Review from './Review';
 
 const Reviews = () => {

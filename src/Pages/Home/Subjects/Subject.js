@@ -2,7 +2,7 @@ import '../Home.css';
 
 const subject = () => {
     return ( 
-    <div>
+    <>
         <div className="subjects">
         <h1>English Language</h1>
 
@@ -38,7 +38,7 @@ const subject = () => {
         </div>
     </div>
 
-    </div>
+    </>
      );
 }
  

@@ -1,9 +1,8 @@
-import './Course_View.css';
+import './MainCourses.css';
 
 const Feedback = () => {
-    return ( 
-    <div>
-        <div className="feedback box">
+    return (  
+    <div className="feedback box">
         <h2>Student feedback</h2>
         <div className="course-rating">
             <div className="student-rate">
@@ -39,7 +38,6 @@ const Feedback = () => {
                   
             </div>
         </div>
-    </div>
     </div>
      );
 }

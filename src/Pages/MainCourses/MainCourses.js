@@ -1,15 +1,12 @@
-import Nav from "../../Components/Nav/Nav_Home";
 import Description from "./Description";
 import Feedback from "./Feedback";
 import Price from "./Price";
 import Reviews from './Reviews/Reviews';
-import './Course_View.css';
+import './MainCourses.css';
 
-const Course_View = () => {
+const MainCourses = () => {
     return ( 
     <div>
-        <Nav />
-
         <div className="second-section">
         <div className="text-part">
             <h2>English Language For 9th Grade</h2>
@@ -53,4 +50,4 @@ const Course_View = () => {
      );
 }
  
-export default Course_View;
+export default MainCourses;

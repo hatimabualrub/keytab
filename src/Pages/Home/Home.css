@@ -144,27 +144,6 @@
   
   /*media */
   @media screen and (max-width: 1378px) {
-    /* Start navbar */
-  
-    .nav .logo img {
-      width: 6rem;
-    }
-    .nav .search {
-      width: 10%;
-      position: relative;
-      margin-right: 10rem;
-    }
-  
-    .nav .buttons #items {
-      padding: 0px 44px;
-    }
-  
-    .nav .buttons #items li {
-      list-style: none;
-      margin-left: 0.9rem;
-      font-size: 1.2rem;
-    }
-    /*End NavBar */
   
     /*Start second section*/
     .second-section {
@@ -235,22 +214,6 @@
   }
   
   @media screen and (max-width: 1042px) {
-    /* Start navbar */
-    .nav .search {
-      margin-right: 0rem;
-    }
-  
-    .nav .buttons #items li {
-      list-style: none;
-      margin-left: 1rem;
-      font-size: 1.2rem;
-    }
-  
-    .nav .buttons .bar i {
-      font-size: 1.4rem;
-    }
-    /*End NavBar */
-  
     /*Start second section*/
     .second-section {
       padding: 2rem;
@@ -332,11 +295,6 @@
   }
   
   @media screen and (max-width: 991px) {
-    /*one change on navbar */
-    .nav .search {
-      margin-left: 0rem;
-    }
-  
     /*Start Subjects section */
     .subjects h1 {
       font-size: 2.5rem;
@@ -346,13 +304,7 @@
   }
   
   @media screen and (max-width: 850px) {
-    /*one change on navbar */
-  
-    .nav .search {
-      margin-left: 3rem;
-    }
-  
-    /*Start Subjects section */
+   /*Start Subjects section */
     .subjects h1 {
       font-size: 1.8rem;
     }
@@ -371,31 +323,6 @@
   }
   
   @media screen and (max-width: 626px) {
-    /* Start navbar */
-    .nav .logo img {
-      width: 5rem;
-      margin-left: 380%;
-    }
-  
-    .nav .search input {
-      margin-right: 0rem;
-      display: none;
-    }
-  
-    .nav .search i {
-      font-size: 1.4rem;
-      top: -0.7rem;
-      left: -6rem;
-      color: var(--ther-color);
-    }
-  
-    .nav .buttons #items li {
-      display: none;
-    }
-    .nav .buttons .bar i {
-      font-size: 1.4rem;
-      display: inline;
-    }
     /*Start second section*/
     .second-section {
       padding: 1.8rem;
@@ -467,33 +394,6 @@
   }
   
   @media screen and (max-width: 496px) {
-    /* Start navbar */
-    .nav .logo img {
-      width: 5rem;
-      margin-left: 351%;
-    }
-  
-    .nav .search input {
-      margin-right: 0rem;
-      display: none;
-    }
-  
-    .nav .search i {
-      font-size: 1.5rem;
-      top: -0.7rem;
-      left: -4.5rem;
-      color: var(--ther-color);
-    }
-  
-    .nav .buttons #items li {
-      display: none;
-    }
-    .nav .buttons .bar i {
-      font-size: 1.5rem;
-      display: inline;
-    }
-    /*End NavBar */
-  
     /*Start second section*/
     .second-section {
       flex-direction: column;

@@ -1,4 +1,4 @@
-import './First.css';
+import './Main.css';
 
 const HowTo = () => {
     return ( 

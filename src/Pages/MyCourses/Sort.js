@@ -1,4 +1,4 @@
-import './My_Courses.css';
+import './MyCourses.css';
 
 const Sort = () => {
     return ( 

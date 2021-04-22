@@ -1,13 +1,13 @@
 import Course from './Course';
-import '../My_Courses.css';
+import '../MyCourses.css';
 
 const Courses = () => {
     return ( 
-    <div>
+    <>
         <Course />
         <Course />
         <Course />
-    </div>
+    </>
         );
 }
  
