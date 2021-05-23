@@ -12,6 +12,7 @@ import Signup from "./Pages/Signup/Signup";
 import NavMain from "./Components/Nav/NavMain";
 import NavHome from "./Components/Nav/NavHome";
 import AuthRoute from "./hoc/AuthRoute";
+import Course from "./Pages/Course/Course";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" component={Signup} />
 
         <AuthRoute path="/home" component={Home} />
+        <AuthRoute path="/course/:id" component={Course} />
         <Route path="/" component={Main} />
       </Switch>
 
