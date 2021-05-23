@@ -14,6 +14,7 @@ import NavHome from "./Components/Nav/NavHome";
 import AuthRoute from "./hoc/AuthRoute";
 import Course from "./Pages/Course/Course";
 
+
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -29,7 +30,7 @@ function App() {
         <AuthRoute path="/course/:id" component={Course} />
         <Route path="/" component={Main} />
       </Switch>
-
+      
       <Footer />
     </div>
   );

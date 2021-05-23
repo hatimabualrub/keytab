@@ -128,28 +128,9 @@
 }
 /*End how to*/
 /*---Media Query --*/
-@media screen and (max-width: 1518px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: 5rem;
-  }
-}
-@media screen and (max-width: 1150px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: 0rem;
-  }
-  .details {
-    padding: 3rem 0%;
-  }
-}
 
 @media screen and (max-width: 958px) {
-  .nav .search {
-    margin-right: -4rem;
-  }
+  
   /*Start How To sextion*/
   .how-to {
     align-items: center;
@@ -203,39 +184,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* Start Nav Bar*/
-  .nav {
-    padding: 0rem 0.9rem;
-  }
-
-  .nav .logo img {
-    width: 5rem;
-  }
-
-  .nav .search i {
-    top: 0.6rem;
-    font-size: 0.8rem;
-  }
-
-  .nav .search input {
-    padding: 0.2rem 2rem;
-  }
-
-  .nav .buttons #items {
-    padding: 0px 0px;
-  }
-
-  .nav .buttons #items li {
-    margin-left: 0.4rem;
-  }
-
-  .small-signup-btn,
-  .small-login-btn {
-    font-size: 0.8rem;
-  }
-
-  /* End Nav Bar*/
-
+ 
   .mid-text {
     top: 15%;
   }
