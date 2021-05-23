@@ -90,21 +90,9 @@
 }
 
 /*media */
-@media screen and (max-width: 1500px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: 0rem;
-  }
-}
+
 
 @media screen and (max-width: 1042px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: 0rem;
-  }
-
   .login {
     position: absolute;
     top: 50%;
@@ -155,12 +143,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: -4rem;
-  }
-  /* End Nav Bar*/
+
   .login i {
     bottom: 6.2rem;
     right: 1.2px;
@@ -170,12 +153,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav .search {
-    width: 10%;
-    position: relative;
-    margin-right: -5rem;
-  }
-  /* End Nav Bar*/
+  
   .login i {
     bottom: 7.1rem;
     right: 1.2px;
@@ -183,63 +161,8 @@
     font-size: medium;
   }
 }
-@media screen and (max-width: 656px) {
-  /* Start navbar */
-  .nav .logo img {
-    width: 5rem;
-    margin-left: 390%;
-  }
-
-  .nav .search input {
-    margin-right: 0rem;
-    display: none;
-  }
-
-  .nav .search i {
-    font-size: 1.5rem;
-    top: -0.7rem;
-    left: -7rem;
-    color: var(--ther-color);
-  }
-
-  .nav .buttons #items li {
-    display: none;
-  }
-  .nav .buttons .bar i {
-    font-size: 1.5rem;
-    display: inline;
-  }
-  /*End NavBar */
-}
 
 @media screen and (max-width: 496px) {
-  /* Start navbar */
-  .nav .logo img {
-    width: 5rem;
-    margin-left: 351%;
-  }
-
-  .nav .search input {
-    margin-right: 0rem;
-    display: none;
-  }
-
-  .nav .search i {
-    font-size: 1.5rem;
-    top: -0.7rem;
-    left: -4.5rem;
-    color: var(--ther-color);
-  }
-
-  .nav .buttons #items li {
-    display: none;
-  }
-  .nav .buttons .bar i {
-    font-size: 1.5rem;
-    display: inline;
-  }
-  /*End NavBar */
-
   .login {
     position: absolute;
     top: 43%;

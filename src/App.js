@@ -13,6 +13,7 @@ import NavMain from "./Components/Nav/NavMain";
 import NavHome from "./Components/Nav/NavHome";
 import AuthRoute from "./hoc/AuthRoute";
 
+
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -27,7 +28,7 @@ function App() {
         <AuthRoute path="/home" component={Home} />
         <Route path="/" component={Main} />
       </Switch>
-
+      
       <Footer />
     </div>
   );

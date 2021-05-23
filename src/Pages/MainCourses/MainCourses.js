@@ -6,7 +6,7 @@ import "./MainCourses.css";
 
 const MainCourses = () => {
   return (
-    <div>
+    <>
       <div className="second-section">
         <div className="text-part">
           <h2>English Language For 9th Grade</h2>
@@ -54,7 +54,7 @@ const MainCourses = () => {
       <Feedback />
 
       <Reviews />
-    </div>
+    </>
   );
 };
 

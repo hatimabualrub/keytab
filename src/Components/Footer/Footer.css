@@ -8,6 +8,7 @@
   align-items: center;
   width: 100%;
   margin-top: -3rem;
+  margin-bottom: -3rem;
   position: absolute;
   /* top: 100%; */
   bottom: 0;
@@ -48,5 +49,37 @@
   .footer {
     padding: 0.5rem 0.5rem;
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .footer {
+    padding: 0.4rem 0.5rem;
+  }
+  .footer p {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .footer {
+    padding: 0.3rem 0.4rem;
+  }
+  .footer p {
+    color: #7f8c8d;
+    font-size: 0.6rem;
+  }
+  .footer .social li i {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1042px) {
+  .footer {
+    padding: 0.9rem 0.9rem;
+  }
+  .footer p {
+    font-size: 0.9rem;
   }
 }
