@@ -1,73 +1,4 @@
-  /*Start second section*/
-   .second-section {
-    background-color: var(--sec-color);
-    color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0;
-  }
-  
-  .second-section .text-part {
-    width: 45%;
-    height: auto;
-    padding-top: 2rem;
-    margin: 0 6%;
-    border-right: 1px solid var(--main-color);
-  }
-  
-  .second-section .text-part h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
-  
-  .second-section .text-part p {
-    font-weight: 800;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .second-section .text-part p:last-child span {
-    color: var(--main-color);
-    border-bottom: 1px solid var(--main-color);
-    font-size: 1rem;
-  }
-  .second-section .text-part .rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 3rem;
-  }
-  
-  .second-section .text-part .rating span {
-    font-weight: bold;
-  }
-  .second-section .text-part .rating .number {
-    color: var(--fourth-color);
-  }
-  .second-section .text-part .rating .stars {
-    padding: 0 0.5rem;
-  }
-  .second-section .text-part .rating .stars li i {
-    font-size: 0.8rem;
-  }
-  .second-section .img {
-    width: 45%;
-    height: auto;
-  }
-  .second-section .img-part {
-    width: 50%;
-    margin: 0 40%;
-  }
-  .second-section .img img {
-    width: 90%;
-    object-fit: cover;
-    border: 2px solid #ffffff;
-  }
-  /*End second section */
-  
-  /*Start Course Price */
+   /*Start Course Price */
   .course-price {
     display: flex;
     flex-direction: row;
@@ -253,55 +184,6 @@
   }
   
   @media screen and (max-width: 735px) {
-  
-    /*Start second section*/
-    .second-section {
-      padding: 1rem 0;
-    }
-  
-    .second-section .text-part {
-      width: 45%;
-      height: auto;
-      padding: 1rem 0.5rem 0 0;
-      margin: 0 6%;
-      border-right: 1px solid var(--main-color);
-    }
-  
-    .second-section .text-part h2 {
-      font-size: 1.4rem;
-    }
-  
-    .second-section .text-part p {
-      font-size: 1rem;
-    }
-  
-    .second-section .text-part .rating {
-      margin-bottom: 2.5rem;
-    }
-  
-    .second-section .text-part .rating span {
-      font-weight: bold;
-      font-size: 0.7rem;
-    }
-  
-    .second-section .text-part .rating .stars {
-      padding: 0 0.3rem;
-    }
-    .second-section .text-part .rating .stars li i {
-      font-size: 0.7rem;
-    }
-    .second-section .img {
-      width: 45%;
-    }
-    .second-section .img-part {
-      width: 70%;
-      margin: 0 10%;
-    }
-    .second-section .img img {
-      width: 100%;
-    }
-    /*End second section */
-  
     /*Start Course Price */
     .course-price {
       padding: 0.6rem 5rem;
@@ -399,37 +281,6 @@
   }
   
   @media screen and (max-width: 553px) {
-    /*Start second section*/
-  
-    .second-section .text-part {
-      width: 45%;
-      margin: 0 3%;
-    }
-  
-    .second-section .text-part h2 {
-      font-size: 1rem;
-    }
-  
-    .second-section .text-part p {
-      font-size: 0.8rem;
-    }
-  
-    .second-section .text-part .rating {
-      margin-bottom: 2.2rem;
-    }
-  
-    .second-section .text-part .rating span {
-      font-size: 0.6rem;
-    }
-  
-    .second-section .text-part .rating .stars {
-      padding: 0 0.2rem;
-    }
-    .second-section .text-part .rating .stars li i {
-      font-size: 0.5rem;
-    }
-    /*End second section */
-  
     /*Start Course Price */
     .course-price {
       padding: 0.4rem 3rem;
@@ -510,61 +361,6 @@
   }
   
   @media screen and (max-width: 465px) {
-    /*Start second section*/
-    .second-section {
-      background-color: #fff;
-      color: var(--sec-color);
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 0;
-    }
-  
-    .second-section .text-part {
-      width: 90%;
-      padding-top: 1rem;
-      border-right: none;
-    }
-  
-    .second-section .text-part h2 {
-      margin-bottom: 0.9rem;
-      font-size: 1.7rem;
-    }
-  
-    .second-section .text-part p {
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    .second-section .text-part .rating {
-      margin-bottom: 1rem;
-    }
-  
-    .second-section .text-part .rating span {
-      font-weight: bold;
-      font-size: 0.8rem;
-    }
-  
-    .second-section .text-part .rating .stars {
-      padding: 0 0.2rem;
-    }
-    .second-section .text-part .rating .stars li i {
-      font-size: 0.8rem;
-    }
-    .second-section .img {
-      width: 100%;
-      height: auto;
-    }
-    .second-section .img-part {
-      width: 100%;
-      margin: 0 auto;
-    }
-    .second-section .img img {
-      width: 100%;
-    }
-    /*End second section */
-  
     /*Start Course Price */
     .course-price {
       padding: 0.4rem 1rem;
