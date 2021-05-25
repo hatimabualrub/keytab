@@ -1,0 +1,145 @@
+/*Lectures sectiin*/
+.lecture-box {
+  background-color: #fbfaf8;
+  width: 60%;
+  margin: 1.5rem auto;
+  border: solid 1px #d3cfcf;
+}
+.lecture {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.thumbnail {
+  width: 15%;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.lecture-information {
+  width: 70%;
+  padding: 1rem 0 1rem 2rem;
+}
+.lecture-information h3 {
+  margin-bottom: 1.5rem;
+}
+.lecture-information p {
+  margin-bottom: 0.8rem;
+}
+.lecture-information i {
+  color: var(--main-color);
+}
+
+/* media query */
+
+@media screen and (max-width: 1378px) {
+  .thumbnail {
+    width: 20%;
+  }
+
+  .lecture-information h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .lecture-information p {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .lecture-information label {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .lecture-information i {
+    color: var(--main-color);
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1042px) {
+  .thumbnail {
+    width: 25%;
+  }
+
+  .lecture-information h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .lecture-information p {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .lecture-information label {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .lecture-information i {
+    color: var(--main-color);
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .thumbnail {
+    width: 30%;
+  }
+  .lecture-information {
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+  .lecture-information h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .lecture-information p {
+    font-size: 0.8rem;
+  }
+  .lecture-information label {
+    font-size: 0.8rem;
+  }
+  .lecture-information i {
+    color: var(--main-color);
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 553px) {
+  .lecture-box {
+    width: 80%;
+    margin: 1.3rem auto;
+  }
+  .thumbnail {
+    width: 28%;
+  }
+  .lecture-information {
+    padding: 0.5rem 0 0.3rem 0.8rem;
+  }
+  .lecture-information h3 {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  .lecture-information p {
+    font-size: 0.7rem;
+  }
+  .lecture-information label {
+    font-size: 0.7rem;
+  }
+  .lecture-information i {
+    color: var(--main-color);
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .lecture-box {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .thumbnail {
+    width: 30%;
+  }
+
+  .lecture-information h3 {
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+  }
+}

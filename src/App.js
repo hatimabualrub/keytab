@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
-import MainCourses from "./Pages/MainCourses/MainCourses";
 import Main from "./Pages/Main/Main";
 import Home from "./Pages/Home/Home";
 // import MyCourses from "./Pages/MyCourses/MyCourses";
@@ -14,9 +13,6 @@ import NavHome from "./Components/Nav/NavHome";
 import AuthRoute from "./hoc/AuthRoute";
 import Course from "./Pages/Course/Course";
 
-
-
-
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -24,17 +20,15 @@ function App() {
   return (
     <div className="page-container">
       {userInfo ? <NavHome /> : <NavMain />}
-      {/*<Switch>
+      <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={Signup} />
 
         <AuthRoute path="/home" component={Home} />
         <AuthRoute path="/course/:id" component={Course} />
         <Route path="/" component={Main} />
-      </Switch>*/}
-      <MainCourses />
-      {/*<Course />*/}
-      
+      </Switch>
+
       <Footer />
     </div>
   );
