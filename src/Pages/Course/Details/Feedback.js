@@ -1,39 +1,40 @@
+import RatingStars from "../../../Components/Stars/RatingStars";
 import StartRatio from "../../../Components/Stars/StarsRatio/StarsRatio";
 import "./Details.css";
 
-const Feedback = () => {
+const Feedback = ({ enrollments }) => {
+  const { rateRatios } = enrollments;
   return (
     <div className="feedback box">
       <h2>Student feedback</h2>
       <div className="course-rating">
         <div className="student-rate">
-          <span>3.7</span>
-          <ul className="stars gold-stars">
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star-half-alt"></i>
-            </li>
-            <li>
-              <i className="far fa-star"></i>
-            </li>
-          </ul>
+          <span>{enrollments.rateValue}</span>
+          <RatingStars rating={enrollments.rateValue} />
           <span>Course Rating</span>
         </div>
 
         <div className="percentage">
-          <StartRatio percentage={35} rate={5} />
-          <StartRatio percentage={35} rate={4} />
-          <StartRatio percentage={35} rate={3} />
-          <StartRatio percentage={35} rate={2} />
-          <StartRatio percentage={35} rate={1} />
+          <StartRatio
+            percentage={rateRatios === 0 ? 0 : rateRatios.fiveRatio}
+            rate={5}
+          />
+          <StartRatio
+            percentage={rateRatios === 0 ? 0 : rateRatios.fourRatio}
+            rate={4}
+          />
+          <StartRatio
+            percentage={rateRatios === 0 ? 0 : rateRatios.threeRatio}
+            rate={3}
+          />
+          <StartRatio
+            percentage={rateRatios === 0 ? 0 : rateRatios.twoRatio}
+            rate={2}
+          />
+          <StartRatio
+            percentage={rateRatios === 0 ? 0 : rateRatios.oneRatio}
+            rate={1}
+          />
         </div>
       </div>
     </div>

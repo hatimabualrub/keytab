@@ -1,6 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { getCoursesHomeReducer } from "./reducers/courseReducers";
+import {
+  courseInfoReducer,
+  courseReviewsReducer,
+  getCoursesHomeReducer,
+} from "./reducers/courseReducers";
 import { userSigninReducer, userSignupReducer } from "./reducers/userReducers";
 
 const initialState = {
@@ -15,6 +19,8 @@ const reducer = combineReducers({
   userSignin: userSigninReducer,
   userSignup: userSignupReducer,
   getCoursesHome: getCoursesHomeReducer,
+  courseInfo: courseInfoReducer,
+  courseReviews: courseReviewsReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

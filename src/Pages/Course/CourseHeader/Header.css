@@ -51,6 +51,7 @@
 }
 .course-header .text-part .rating .stars li i {
   font-size: 0.8rem;
+  margin-left: 0.18rem;
 }
 .course-header .img {
   width: 45%;

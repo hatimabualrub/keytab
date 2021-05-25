@@ -5,13 +5,13 @@ const StartRatio = (props) => {
   for (let i = 0; i < 5; i++) {
     if (i < props.rate) {
       fullStars.push(
-        <li>
+        <li key={i}>
           <i className="fas fa-star"></i>
         </li>
       );
     } else {
       emptyStars.push(
-        <li>
+        <li key={i}>
           <i className="far fa-star"></i>
         </li>
       );

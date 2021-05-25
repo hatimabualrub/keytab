@@ -1,5 +1,7 @@
 import { useHistory } from "react-router-dom";
 
+import RatingStars from "../../../Components/Stars/RatingStars";
+
 const CourseCard = ({ course }) => {
   const history = useHistory();
 
@@ -20,26 +22,10 @@ const CourseCard = ({ course }) => {
         <h4>{course.course.title}</h4>
         <p>{course.instructor}</p>
         <div className="rating">
-          <span>3.7</span>
-          <ul className="stars">
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star"></i>
-            </li>
-            <li>
-              <i className="fas fa-star-half-alt"></i>
-            </li>
-            <li>
-              <i className="far fa-star"></i>
-            </li>
-          </ul>
+          <span>{course.enrollments.rateValue}</span>
+          <RatingStars rating={course.enrollments.rateValue} />
 
-          <span className="rate"> ({course.enrollments.enrollmentCount})</span>
+          <span className="rate"> ({course.enrollments.rateCount})</span>
         </div>
       </div>
     </div>

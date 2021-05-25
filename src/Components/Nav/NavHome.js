@@ -1,10 +1,16 @@
 import "./NavHome.css";
 import Logo from "../../images/Logo.PNG";
+import { useHistory } from "react-router";
 
 const Nav = () => {
+  const history = useHistory();
+
+  const redirectHome = () => {
+    history.push("/home");
+  };
   return (
     <div className="nav">
-      <div className="logo">
+      <div className="logo" onClick={redirectHome}>
         <img draggable="false" src={Logo} alt="Logo" />
       </div>
       <div className="search">
