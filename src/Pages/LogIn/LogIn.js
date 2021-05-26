@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { requestSignin } from "../../actions/userActions";
 import Spinner from "../../Components/Spinner/Spinner";
@@ -34,7 +34,7 @@ const LogIn = () => {
       {loading && <Spinner />}
       <h1>Log in</h1>
       <p>
-        Don't have an account yet? <span>Sign up</span>
+        Don't have an account yet? <Link to='signup'><span >Sign up</span></Link>
       </p>
       <label>Email</label>
       <input

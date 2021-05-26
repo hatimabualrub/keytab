@@ -31,7 +31,7 @@ const Course = () => {
         </>
       )}
 
-      {/* <Lectures /> */}
+       {/*<Lectures /> */}
     </>
   );
 };

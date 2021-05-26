@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { requestSignup } from "../../actions/userActions";
 import Spinner from "../../Components/Spinner/Spinner";
@@ -40,7 +40,7 @@ const SignIn = () => {
       {loading && <Spinner />}
       <h1>Sign up</h1>
       <p>
-        Already Have an account? <span>Log in</span>
+        Already Have an account? <Link to='/login'><span>Log in</span></Link>
       </p>
 
       <label>Full Name</label>

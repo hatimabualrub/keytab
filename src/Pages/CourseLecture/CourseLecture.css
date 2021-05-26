@@ -1,0 +1,182 @@
+  /*srart embed-lecture section*/
+  .embed-lecture {
+    width: 70%;
+    margin: 3rem auto 7rem;
+    background-color: #fbfaf8;
+    height: auto;
+    box-shadow: -1px 7px 24px -7px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: -1px 7px 24px -7px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: -1px 7px 24px -7px rgba(0, 0, 0, 0.38);
+    padding: 2rem;
+  }
+  .embed-lecture .vid {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .embed-lecture .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .information {
+    width: 70%;
+  }
+  .back-to-course {
+    width: 30%;
+    text-align: right;
+  }
+  #move-btn {
+    background-color: var(--main-color);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  /*End embed-lecture section*/
+  
+  /*start Next and previous btns*/
+  .move-lectures {
+    padding: 0rem 13rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .moving-btn {
+    width: 50%;
+  }
+  /* End Next and previous btns*/
+  
+  /* media query */
+  @media screen and (max-width: 890px) {
+    /*srart embed-lecture section*/
+    .embed-lecture {
+      margin: 2rem auto 6rem;
+      width: 90%;
+      padding: 1.3rem;
+    }
+    .embed-lecture .vid {
+      height: 400px;
+    }
+  
+    .information .title {
+      font-size: 1.5rem;
+    }
+    .information .lecture-description {
+      font-size: 0.8rem;
+    }
+  
+    #move-btn {
+      padding: 0.4rem 1.3rem;
+      font-size: 1.1rem;
+    }
+    /*End embed-lecture section*/
+  
+    /*start Next and previous btns*/
+    .move-lectures {
+      padding: 0rem 9rem;
+    }
+    /* End Next and previous btns*/
+    
+  }
+  
+  @media screen and (max-width: 735px) {
+    /*srart embed-lecture section*/
+    .embed-lecture {
+      width: 80%;
+      margin: 1.5rem auto 4.5rem;
+      padding: 1.3rem;
+    }
+    .embed-lecture .vid {
+      height: 300px;
+    }
+  
+    .information .title {
+      font-size: 1.3rem;
+    }
+    .information .lecture-description {
+      font-size: 0.8rem;
+    }
+  
+    #move-btn {
+      padding: 0.2rem 1rem;
+      font-size: 1rem;
+    }
+    /*End embed-lecture section*/
+  
+    /*start Next and previous btns*/
+    .move-lectures {
+      padding: 0rem 7rem;
+      
+    }
+  
+    /* End Next and previous btns*/
+  }
+  
+  @media screen and (max-width: 557px) {
+    /*srart embed-lecture section*/
+    .embed-lecture {
+      width: 90%;
+    }
+    .embed-lecture .vid {
+      height: 250px;
+    }
+  
+    .information .title {
+      font-size: 1.1rem;
+    }
+    .information .lecture-description {
+      font-size: 0.7rem;
+    }
+  
+    #move-btn {
+      padding: 0.2rem 1rem;
+      font-size: 0.9rem;
+    }
+    /*End embed-lecture section*/
+  
+    /*start Next and previous btns*/
+    .move-lectures {
+      padding: 0rem 3rem;
+      
+    }
+    /* End Next and previous btns*/
+  }
+  
+  @media screen and (max-width: 465px) {  
+    /*srart embed-lecture section*/
+    .embed-lecture {
+      width: 95%;
+      padding: 0.5rem;
+    }
+    .information {
+      width: 60%;
+    }
+    .back-to-course {
+      width: 40%;
+      text-align: right;
+    }
+    .embed-lecture .vid {
+      height: 200px;
+    }
+  
+    .information .title {
+      font-size: 1rem;
+    }
+  
+    #move-btn {
+      padding: 0.2rem 1rem;
+      font-size: 0.7rem;
+    }
+    /*End embed-lecture section*/
+  
+    /*start Next and previous btns*/
+    .move-lectures {
+      padding: 0rem 3rem;
+      
+    }
+    /* End Next and previous btns*/
+  }
