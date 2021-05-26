@@ -1,4 +1,8 @@
 import {
+  ENROLL_COURSE_CLEAR,
+  ENROLL_COURSE_FAIL,
+  ENROLL_COURSE_REQUEST,
+  ENROLL_COURSE_SUCCESS,
   GET_COURSES_FAIL_HOME,
   GET_COURSES_REQUEST_HOME,
   GET_COURSES_SUCCESS_HOME,
@@ -53,6 +57,21 @@ export const courseReviewsReducer = (state = {}, action) => {
       return { loading: false, reviews: action.payload };
     case GET_COURSE_REVIEWS_FAIL:
       return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const courseEnrollmentReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ENROLL_COURSE_REQUEST:
+      return { loading: true, success: false };
+    case ENROLL_COURSE_SUCCESS:
+      return { loading: false, success: true };
+    case ENROLL_COURSE_FAIL:
+      return { loading: false, error: action.payload, success: false };
+    case ENROLL_COURSE_CLEAR:
+      return { success: false };
     default:
       return state;
   }
