@@ -41,7 +41,9 @@ const Course = () => {
         </>
       )}
 
+
       {view === "lectures" && <Lectures courseId={course.course._id} />}
+
     </>
   );
 };

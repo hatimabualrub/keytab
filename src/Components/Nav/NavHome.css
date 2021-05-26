@@ -131,6 +131,9 @@
   .nav .buttons .bar i {
     font-size: 1.4rem;
   }
+  .nav .logo img {
+    width: 5.5rem;
+  }
 }
 /*End NavBar */
 @media screen and (max-width: 991px) {
@@ -226,7 +229,34 @@
     font-size: 1.3rem;
   }
 }
-
+@media screen and (max-width: 557px) {
+  /* Start navbar */
+  .nav .logo img {
+    width: 4.5rem;
+  }
+  .nav .search {
+    margin-right: -3rem;
+  }
+  .nav input {
+    padding: 0rem 0 0 1rem;
+  }
+  .nav input::placeholder {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .nav .search i {
+    font-size: 0.7rem;
+    top: 0.3rem;
+    left: 0.5rem;
+  }
+}
+  .nav .buttons #items li {
+    font-size: 0.8rem;
+  }
+  .nav .buttons .bar i {
+    font-size: 1.2rem;
+  }
+  /*End NavBar */
 @media screen and (max-width: 553px) {
   /* Start navbar */
   .nav .logo img {
