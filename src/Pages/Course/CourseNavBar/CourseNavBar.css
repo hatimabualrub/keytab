@@ -19,6 +19,7 @@
   padding: 0.5rem 2rem;
   border-radius: 10px;
   color: #ffffff;
+  cursor: pointer;
 }
 .right-buttons {
   display: flex;
@@ -33,6 +34,12 @@
   padding: 0.4rem 2rem;
   border-radius: 10px;
   margin-right: 0.5rem;
+  cursor: pointer;
+}
+.clicked:hover {
+  background-color: var(--main-color);
+  color: #ffffff;
+  border: none;
 }
 /*End course price */
 

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getCourseInfo } from "../../actions/courseActions";
@@ -11,14 +11,20 @@ import Spinner from "../../Components/Spinner/Spinner";
 
 const Course = () => {
   const courseInfo = useSelector((state) => state.courseInfo);
-  const { course, loading, error } = courseInfo;
+  const { course, loading } = courseInfo;
   const dispatch = useDispatch();
   const { id } = useParams();
+
+  const [view, setview] = useState("details");
 
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(getCourseInfo(id));
   }, [dispatch, id]);
+
+  const toggleView = (newView) => {
+    setview(newView);
+  };
 
   return (
     <>
@@ -26,12 +32,16 @@ const Course = () => {
       {course && (
         <>
           <Header course={course} />
-          <CourseNavBar />
-          <Details course={course} />
+          <CourseNavBar
+            course={course}
+            toggleView={toggleView}
+            viewState={view}
+          />
+          {view === "details" && <Details course={course} />}
         </>
       )}
 
-      {/* <Lectures /> */}
+      {view === "lectures" && <Lectures courseId={course.course._id} />}
     </>
   );
 };
