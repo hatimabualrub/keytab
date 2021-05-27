@@ -1,9 +1,26 @@
 import { useHistory } from "react-router-dom";
 
-import RatingStars from "../../../Components/Stars/RatingStars";
+import RatingStars from "../Stars/RatingStars";
+import "./CourseCard.css";
 
 const CourseCard = ({ course }) => {
   const history = useHistory();
+
+  const handleTitleLength = (t, length) => {
+    let title = "";
+    if (t.length < length) {
+      title = t;
+    } else {
+      const tokens = t.split(" ");
+      for (let i = 0; i < tokens.length; i++) {
+        if (title.length + tokens[i].length < length) {
+          title += " " + tokens[i];
+        }
+      }
+      title += "...";
+    }
+    return title;
+  };
 
   const onCardClick = () => {
     history.push("/course/" + course.course._id);
@@ -19,7 +36,8 @@ const CourseCard = ({ course }) => {
       </div>
 
       <div className="details">
-        <h4>{course.course.title}</h4>
+        <h4>{handleTitleLength(course.course.title, 50)}</h4>
+        <br />
         <p>{course.instructor}</p>
         <div className="rating">
           <span>{course.enrollments.rateValue}</span>

@@ -1,11 +1,15 @@
+import { useSelector } from "react-redux";
+
 import "./Home.css";
 
 const Mid = () => {
+  const { userInfo } = useSelector((state) => state.userSignin);
+  const { name } = userInfo;
   return (
     <div className="second-section">
       <div className="welcome">
         <h1>
-          Welcome <span>Hatim </span>,
+          Welcome <span>{name}</span>,
         </h1>
         <p>Let's start Learning</p>
       </div>

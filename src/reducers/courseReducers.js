@@ -12,6 +12,12 @@ import {
   GET_COURSE_REVIEWS_FAIL,
   GET_COURSE_REVIEWS_REQUEST,
   GET_COURSE_REVIEWS_SUCCESS,
+  GET_CREATED_COURSES_FAIL,
+  GET_CREATED_COURSES_REQUEST,
+  GET_CREATED_COURSES_SUCCESS,
+  GET_ENROLLED_COURSES_FAIL,
+  GET_ENROLLED_COURSES_REQUEST,
+  GET_ENROLLED_COURSES_SUCCESS,
 } from "../constants/courseConstants";
 
 export const getCoursesHomeReducer = (
@@ -72,6 +78,32 @@ export const courseEnrollmentReducer = (state = {}, action) => {
       return { loading: false, error: action.payload, success: false };
     case ENROLL_COURSE_CLEAR:
       return { success: false };
+    default:
+      return state;
+  }
+};
+
+export const enrolledCoursesReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GET_ENROLLED_COURSES_REQUEST:
+      return { loading: true };
+    case GET_ENROLLED_COURSES_SUCCESS:
+      return { loading: false, courses: action.payload };
+    case GET_ENROLLED_COURSES_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const createdCoursesReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GET_CREATED_COURSES_REQUEST:
+      return { loading: true };
+    case GET_CREATED_COURSES_SUCCESS:
+      return { loading: false, courses: action.payload };
+    case GET_CREATED_COURSES_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }

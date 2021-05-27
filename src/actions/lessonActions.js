@@ -48,8 +48,6 @@ export const getLessonInfo = (lessonId) => async (dispatch, getState) => {
       },
     });
 
-    console.log(data);
-
     dispatch({ type: GET_LESSON_INFO_SUCCESS, payload: data });
   } catch (e) {
     dispatch({

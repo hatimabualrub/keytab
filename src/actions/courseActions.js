@@ -13,6 +13,12 @@ import {
   GET_COURSE_REVIEWS_FAIL,
   GET_COURSE_REVIEWS_REQUEST,
   GET_COURSE_REVIEWS_SUCCESS,
+  GET_CREATED_COURSES_FAIL,
+  GET_CREATED_COURSES_REQUEST,
+  GET_CREATED_COURSES_SUCCESS,
+  GET_ENROLLED_COURSES_FAIL,
+  GET_ENROLLED_COURSES_REQUEST,
+  GET_ENROLLED_COURSES_SUCCESS,
 } from "../constants/courseConstants";
 
 export const getCoursesHome = (subject) => async (dispatch, getState) => {
@@ -102,6 +108,52 @@ export const enrollCourse = (courseId) => async (dispatch, getState) => {
   } catch (e) {
     dispatch({
       type: ENROLL_COURSE_FAIL,
+      payload:
+        e.response && e.response.data.message
+          ? e.response.data.message
+          : e.message,
+    });
+  }
+};
+
+export const getEnrolledCourses = () => async (dispatch, getState) => {
+  dispatch({ type: GET_ENROLLED_COURSES_REQUEST });
+  const {
+    userSignin: {
+      userInfo: { token },
+    },
+  } = getState();
+  try {
+    const { data } = await axios.get("/courses/view/enrolled", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    dispatch({ type: GET_ENROLLED_COURSES_SUCCESS, payload: data });
+  } catch (e) {
+    dispatch({
+      type: GET_ENROLLED_COURSES_FAIL,
+      payload:
+        e.response && e.response.data.message
+          ? e.response.data.message
+          : e.message,
+    });
+  }
+};
+
+export const getCreatedCourses = () => async (dispatch, getState) => {
+  dispatch({ type: GET_CREATED_COURSES_REQUEST });
+  const {
+    userSignin: {
+      userInfo: { token },
+    },
+  } = getState();
+  try {
+    const { data } = await axios.get("/courses/view/created", {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    dispatch({ type: GET_CREATED_COURSES_SUCCESS, payload: data });
+  } catch (e) {
+    dispatch({
+      type: GET_CREATED_COURSES_FAIL,
       payload:
         e.response && e.response.data.message
           ? e.response.data.message

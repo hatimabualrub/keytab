@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 import "../Home.css";
-import CourseCard from "./CourseCard";
+import CourseCard from "../../../Components/CourseCard/CourseCard";
 import { getCoursesHome } from "../../../actions/courseActions";
 
 const Subject = (props) => {

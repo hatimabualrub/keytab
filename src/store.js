@@ -4,6 +4,8 @@ import {
   courseEnrollmentReducer,
   courseInfoReducer,
   courseReviewsReducer,
+  createdCoursesReducer,
+  enrolledCoursesReducer,
   getCoursesHomeReducer,
 } from "./reducers/courseReducers";
 import {
@@ -29,6 +31,8 @@ const reducer = combineReducers({
   courseEnrollment: courseEnrollmentReducer,
   courseLessons: courseLessonsReducer,
   lessonInfo: lessonInfoReducer,
+  enrolledCourses: enrolledCoursesReducer,
+  createdCourses: createdCoursesReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

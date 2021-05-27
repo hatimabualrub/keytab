@@ -1,6 +1,7 @@
 import "./NavHome.css";
 import Logo from "../../images/Logo.PNG";
 import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const history = useHistory();
@@ -26,14 +27,22 @@ const Nav = () => {
       <div className="buttons">
         <ul id="items">
           <li>
-            <a className="nav-item" href="/">
+            <NavLink
+              className="nav-item"
+              activeStyle={{ color: "#f86014" }}
+              to="/home"
+            >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="nav-item active" href="/">
+            <NavLink
+              className="nav-item"
+              activeStyle={{ color: "#f86014" }}
+              to="/mycourses"
+            >
               My Courses
-            </a>
+            </NavLink>
           </li>
         </ul>
         <div className="bar">
