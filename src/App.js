@@ -21,12 +21,13 @@ function App() {
   return (
     <div className="page-container">
       {userInfo ? <NavHome /> : <NavMain />}
-     <Switch>
+      <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={Signup} />
 
         <AuthRoute path="/home" component={Home} />
         <AuthRoute path="/course/:id" component={Course} />
+        <AuthRoute path="/lesson/:id" component={CourseLecture} />
         <Route path="/" component={Main} />
       </Switch>
       <Footer />

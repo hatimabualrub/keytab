@@ -1,25 +1,38 @@
-import './CourseLecture.css'
-import Details from './LectureDetails'
-import LectureVideo from './LectureVideo'
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
-function CourseLecture() {
-    return (
+import { getLessonInfo } from "../../actions/lessonActions";
+import Spinner from "../../Components/Spinner/Spinner";
+import "./CourseLecture.css";
+import Details from "./LectureDetails";
+import LectureVideo from "./LectureVideo";
+import { NavButtons } from "./NavButtons";
+
+const CourseLecture = () => {
+  const lessonInfo = useSelector((state) => state.lessonInfo);
+  const { loading, lesson } = lessonInfo;
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getLessonInfo(id));
+  }, [dispatch, id]);
+
+  return (
     <>
-    <div className="embed-lecture">
-        <LectureVideo />
-        <Details />
-    </div>
-   
-    <div className="move-lectures">
-        <div>
-          <a href="\"  className="moving-btn" id="move-btn"> <i className="fas fa-arrow-left"></i> {'\u00A0'} Previous  </a>
-        </div>
-        <div>
-          <a href="\" className="moving-btn" id="move-btn"> Next  {'\u00A0'} <i className="fas fa-arrow-right"></i> </a>
-        </div>
-    </div>
+      {loading && <Spinner />}
+      {lesson && (
+        <>
+          <div className="embed-lecture">
+            <LectureVideo lesson={lesson.lesson} />
+            <Details lesson={lesson.lesson} />
+          </div>
+          <NavButtons lessonNav={lesson.lessonNav} />
+        </>
+      )}
     </>
-    )
-}
+  );
+};
 
-export default CourseLecture
+export default CourseLecture;

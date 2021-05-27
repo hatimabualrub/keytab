@@ -1,8 +1,15 @@
+import { useHistory } from "react-router-dom";
+
 import "./Lecture.css";
 
 const Lecture = ({ lesson }) => {
+  const history = useHistory();
+  const lectureClickHandler = () => {
+    history.push("/lesson/" + lesson._id);
+  };
+
   return (
-    <div className="lecture-box">
+    <div className="lecture-box" onClick={lectureClickHandler}>
       <div className="lecture">
         <div className="thumbnail">
           <img src={"/images/" + lesson._id} alt="thumbnail" />
