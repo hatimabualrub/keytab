@@ -6,7 +6,10 @@ import {
   courseReviewsReducer,
   getCoursesHomeReducer,
 } from "./reducers/courseReducers";
-import { courseLessonsReducer } from "./reducers/lessonReducers";
+import {
+  courseLessonsReducer,
+  lessonInfoReducer,
+} from "./reducers/lessonReducers";
 import { userSigninReducer, userSignupReducer } from "./reducers/userReducers";
 
 const initialState = {
@@ -25,6 +28,7 @@ const reducer = combineReducers({
   courseReviews: courseReviewsReducer,
   courseEnrollment: courseEnrollmentReducer,
   courseLessons: courseLessonsReducer,
+  lessonInfo: lessonInfoReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

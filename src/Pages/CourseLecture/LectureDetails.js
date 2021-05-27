@@ -1,21 +1,22 @@
-const { Link } = require("react-router-dom");
+import { Link } from "react-router-dom";
 
-
-function Details() {
-    return (
-        <div className="container">
-
-        <div className="information">
-          <h1 className="title">Lecture Name</h1>
-          <p className="lecture-description">Lecture Description Lecture DescriptionLecture DescriptionLecture DescriptionLecture DescriptionLecture DescriptionLecture</p>
-        </div>
-
-        <div className="back-to-course">
-          <a id="move-btn" href="/course/:id">Back To Course</a>
-        </div>
-
+const Details = ({ lesson }) => {
+  return (
+    <div className="container">
+      <div className="information">
+        <h1 className="title">
+          {lesson.order}) {lesson.title}
+        </h1>
+        <p className="lecture-description">{lesson.description}</p>
       </div>
-    )
-}
 
-export default Details
+      <div className="back-to-course">
+        <Link id="move-btn" to={`/course/${lesson.course}`}>
+          Back To Course
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Details;
