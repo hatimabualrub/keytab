@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import CreatedCourses from "./CreatedCourses";
 import EnrolledCourses from "./EnrolledCourses";
@@ -9,7 +10,12 @@ const MyCourses = () => {
   return (
     <>
       <div className="my-courses-header">
-        <h1>My courses</h1>
+        <div className="header-row">
+          <h1>My courses</h1>
+          <Link className="create-button" to="/createcourse">
+            Create Course
+          </Link>
+        </div>
         <div className="en-created">
           <p
             className={viewEnrolled ? "pactive" : ""}

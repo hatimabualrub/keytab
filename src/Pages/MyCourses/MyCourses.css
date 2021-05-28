@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
 .my-courses-list {
@@ -41,6 +41,24 @@
 
 .my-courses-header .en-created p:hover {
   color: var(--main-color);
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.create-button {
+  background-color: var(--main-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  height: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
 .pactive {
@@ -219,4 +237,11 @@
     margin-top: 3rem;
   }
   /*End sort by */
+
+  .create-button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    height: 1.5rem;
+  }
 }
