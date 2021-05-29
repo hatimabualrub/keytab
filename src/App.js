@@ -15,6 +15,7 @@ import Course from "./Pages/Course/Course";
 import CourseLecture from "./Pages/CourseLecture/CourseLecture";
 import MyCourses from "./Pages/MyCourses/MyCourses";
 import CreateCourse from "./Pages/CreateCourse/CreateCourse";
+import AddLecture from "./Pages/AddLecture/AddLecture";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -32,6 +33,7 @@ function App() {
         <AuthRoute path="/lesson/:id" component={CourseLecture} />
         <AuthRoute path="/mycourses" component={MyCourses} />
         <AuthRoute path="/createcourse" component={CreateCourse} />
+        <AuthRoute path="/addlecture" component={AddLecture} />
 
         <Route path="/" component={Main} />
       </Switch>
