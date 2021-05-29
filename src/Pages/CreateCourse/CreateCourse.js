@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
+import { createCourse as createCourseAction } from "../../actions/courseActions";
+import Spinner from "../../Components/Spinner/Spinner";
+import { CREATE_COURSE_RESET } from "../../constants/courseConstants";
 import "./CreateCourse.css";
 
 const CreateCourse = () => {
@@ -11,6 +16,12 @@ const CreateCourse = () => {
   const [longDescription, setLongDescription] = useState("");
   const [image, setImage] = useState();
 
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const createCourse = useSelector((state) => state.createCourse);
+  const { loading, courseId } = createCourse;
+
   const submitHandler = (e) => {
     e.preventDefault();
     const request = {
@@ -21,11 +32,19 @@ const CreateCourse = () => {
       gradeLevel,
       longDescription,
     };
-    console.log(request);
+    dispatch(createCourseAction(request, image));
   };
+
+  useEffect(() => {
+    if (courseId) {
+      history.push(`/course/${courseId}`);
+    }
+    return dispatch({ type: CREATE_COURSE_RESET });
+  }, [courseId, history, dispatch]);
 
   return (
     <div className="wrapper">
+      {loading && <Spinner />}
       <div className="title"> Create New Course</div>
 
       <form className="form" onSubmit={submitHandler}>

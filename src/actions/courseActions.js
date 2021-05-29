@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  CREATE_COURSE_FAIL,
+  CREATE_COURSE_REQUEST,
+  CREATE_COURSE_SUCCESS,
   ENROLL_COURSE_CLEAR,
   ENROLL_COURSE_FAIL,
   ENROLL_COURSE_REQUEST,
@@ -154,6 +157,40 @@ export const getCreatedCourses = () => async (dispatch, getState) => {
   } catch (e) {
     dispatch({
       type: GET_CREATED_COURSES_FAIL,
+      payload:
+        e.response && e.response.data.message
+          ? e.response.data.message
+          : e.message,
+    });
+  }
+};
+
+export const createCourse = (course, image) => async (dispatch, getState) => {
+  dispatch({ type: CREATE_COURSE_REQUEST });
+  const {
+    userSignin: {
+      userInfo: { token },
+    },
+  } = getState();
+  try {
+    const { data } = await axios.post("/courses/create", course, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    const fd = new FormData();
+    fd.append("image", image, image.name);
+    await axios.post(`/images/${data.courseId}`, fd, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    dispatch({ type: CREATE_COURSE_SUCCESS, payload: data.courseId });
+  } catch (e) {
+    dispatch({
+      type: CREATE_COURSE_FAIL,
       payload:
         e.response && e.response.data.message
           ? e.response.data.message

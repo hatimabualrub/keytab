@@ -1,4 +1,8 @@
 import {
+  CREATE_COURSE_FAIL,
+  CREATE_COURSE_REQUEST,
+  CREATE_COURSE_RESET,
+  CREATE_COURSE_SUCCESS,
   ENROLL_COURSE_CLEAR,
   ENROLL_COURSE_FAIL,
   ENROLL_COURSE_REQUEST,
@@ -104,6 +108,21 @@ export const createdCoursesReducer = (state = {}, action) => {
       return { loading: false, courses: action.payload };
     case GET_CREATED_COURSES_FAIL:
       return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const createCourseReducer = (state = {}, action) => {
+  switch (action.type) {
+    case CREATE_COURSE_REQUEST:
+      return { loading: true };
+    case CREATE_COURSE_SUCCESS:
+      return { loading: false, courseId: action.payload };
+    case CREATE_COURSE_FAIL:
+      return { loading: false, error: action.payload };
+    case CREATE_COURSE_RESET:
+      return {};
     default:
       return state;
   }
