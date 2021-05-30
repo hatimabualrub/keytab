@@ -10,6 +10,7 @@ import {
   getCoursesHomeReducer,
 } from "./reducers/courseReducers";
 import {
+  addLessonReducer,
   courseLessonsReducer,
   lessonInfoReducer,
 } from "./reducers/lessonReducers";
@@ -35,6 +36,7 @@ const reducer = combineReducers({
   enrolledCourses: enrolledCoursesReducer,
   createdCourses: createdCoursesReducer,
   createCourse: createCourseReducer,
+  addLesson: addLessonReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

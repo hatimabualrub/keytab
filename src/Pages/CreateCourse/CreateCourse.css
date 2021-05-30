@@ -80,7 +80,7 @@
 .custom_select select:focus {
   border: 1px solid var(--main-color);
 }
-.btn {
+.submit-btn {
   width: 100%;
   padding: 0.7rem 1rem;
   font-size: 1rem;
@@ -92,7 +92,7 @@
   border-radius: 3px;
   outline: none;
 }
-.wrapper .form .inputfield .btn:hover {
+.wrapper .form .inputfield .submit-btn:hover {
   opacity: 0.7;
 }
 .wrapper .form .inputfield:last-child {

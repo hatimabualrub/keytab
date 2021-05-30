@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-// import { useSelector, useDispatch } from "react-redux";
-// import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory, useParams } from "react-router-dom";
+import { addLesson as addLessonAction } from "../../actions/lessonActions";
 
-// import Spinner from "../../Components/Spinner/Spinner";
+import Spinner from "../../Components/Spinner/Spinner";
+import { ADD_LESSON_RESET } from "../../constants/lessonConstants";
 
 const AddLecture = () => {
   const [title, setTitle] = useState("");
@@ -10,11 +12,39 @@ const AddLecture = () => {
   const [videoLink, setVideoLink] = useState("");
   const [image, setImage] = useState();
 
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const addLesson = useSelector((state) => state.addLesson);
+  const { loading, success } = addLesson;
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const lesson = {
+      title,
+      description,
+      videoLink:
+        "https://www.youtube.com/embed/" +
+        videoLink.substr(videoLink.indexOf("=") + 1),
+      course: id,
+    };
+
+    dispatch(addLessonAction(lesson, image));
+  };
+
+  useEffect(() => {
+    if (success) {
+      history.push(`/course/${id}`);
+    }
+    return dispatch({ type: ADD_LESSON_RESET });
+  }, [success, history, dispatch, id]);
+
   return (
     <div className="wrapper add-lecture-wrapper">
+      {loading && <Spinner />}
       <div className="title">Add New Lecture</div>
-
-      <form action="#" className="form">
+      <form action="#" className="form" onSubmit={submitHandler}>
         <div className="inputfield">
           <label>Title</label>
           <input
@@ -59,7 +89,7 @@ const AddLecture = () => {
         </div>
 
         <div className="inputfield">
-          <input type="submit" value="Create" className="btn" />
+          <input type="submit" value="Create" className="submit-btn" />
         </div>
       </form>
     </div>

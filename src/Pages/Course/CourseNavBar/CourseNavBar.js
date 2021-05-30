@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { enrollCourse } from "../../../actions/courseActions";
 import Spinner from "../../../Components/Spinner/Spinner";
 
@@ -23,7 +24,7 @@ export default function CourseNavBar({ course, toggleView, viewState }) {
         <span>Grade level :</span> {course.course.gradeLevel}{" "}
       </p>
       <div className="right-buttons">
-        {userState.isUserEnrolled || success ? (
+        {userState.isUserEnrolled || success || userState.isUserCreator ? (
           <>
             <p
               className="clicked"
@@ -33,7 +34,16 @@ export default function CourseNavBar({ course, toggleView, viewState }) {
             >
               Course {viewState === "details" ? "content" : "details"}{" "}
             </p>
-            <p className="second-para">Enrolled</p>
+            {userState.isUserCreator ? (
+              <Link
+                className="second-para"
+                to={`/addlecture/${course.course._id}`}
+              >
+                Add Lectures
+              </Link>
+            ) : (
+              <p className="second-para">Enrolled</p>
+            )}
           </>
         ) : (
           <p className="second-para enroll" onClick={enrollmentHandler}>

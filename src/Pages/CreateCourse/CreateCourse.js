@@ -138,7 +138,7 @@ const CreateCourse = () => {
         </div>
 
         <div className="inputfield">
-          <input type="submit" value="Create" className="btn" />
+          <input type="submit" value="Create" className="submit-btn" />
         </div>
       </form>
     </div>

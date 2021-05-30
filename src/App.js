@@ -33,7 +33,7 @@ function App() {
         <AuthRoute path="/lesson/:id" component={CourseLecture} />
         <AuthRoute path="/mycourses" component={MyCourses} />
         <AuthRoute path="/createcourse" component={CreateCourse} />
-        <AuthRoute path="/addlecture" component={AddLecture} />
+        <AuthRoute path="/addlecture/:id" component={AddLecture} />
 
         <Route path="/" component={Main} />
       </Switch>
