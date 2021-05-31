@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="page-container">
-      {userInfo ? <NavHome /> : <NavMain />}
+     {userInfo ? <NavHome /> : <NavMain />}
       <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={Signup} />

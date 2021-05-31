@@ -60,6 +60,7 @@
   padding: 0.94rem 1rem;
   border-radius: 8px;
   color: var(--main-color);
+  cursor: pointer;
 }
 .login .para {
   width: 100%;

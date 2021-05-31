@@ -1,4 +1,5 @@
 import './Footer.css';
+import {GrInstagram, GrTwitter, GrFacebook} from 'react-icons/gr'
 
 const Footer = () => {
     return ( 
@@ -7,9 +8,21 @@ const Footer = () => {
            Copyright © 2021 by KeyTab. All rights reserved.
         </p>
         <ul className="social">
-           <li> <i className="fab fa-facebook-square"></i></li>
-            <li><i className="fab fa-instagram-square"></i></li>
-            <li><i className="fab fa-twitter-square"></i></li>
+            
+            <a 
+            href='https://www.facebook.com/justedujo' 
+            className="facebook">
+                <GrFacebook /></a>
+            <a 
+            href='https://www.instagram.com/just_1986/?hl=en' 
+            className="instagram">
+                <GrInstagram />
+            </a>
+            <a 
+            href='https://www.twitter.com/justedujo' 
+            className="twitter">
+                <GrTwitter />
+            </a>
         </ul>
     </div>
      );

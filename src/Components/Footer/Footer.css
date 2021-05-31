@@ -21,10 +21,18 @@
   display: flex;
   flex-direction: row;
 }
-.footer ul li {
+.footer ul a {
   padding: 0px 2px;
 }
-
+.facebook{
+  color: blue;
+}
+.instagram{
+  color: #5f2b81;
+}
+.twitter{
+  color:#00acee;
+}
 @media screen and (max-width: 958px) {
   .footer {
     padding: 0.8rem 0.8rem;

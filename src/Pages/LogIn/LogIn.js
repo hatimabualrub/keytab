@@ -9,6 +9,7 @@ import "./LogIn.css";
 const LogIn = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const userSignin = useSelector((state) => state.userSignin);
   const { loading, error, userInfo } = userSignin;
@@ -46,12 +47,14 @@ const LogIn = () => {
       <label>Password</label>
       <div className="eye">
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setpassword(e.target.value)}
         />
-        <i className="fas fa-eye"></i>
+        <i 
+        className="fas fa-eye"
+        onClick={() => setShowPassword(prevState => !prevState)}></i>
       </div>
       <div className="para hidden">
         <p>
