@@ -16,6 +16,7 @@ import CourseLecture from "./Pages/CourseLecture/CourseLecture";
 import MyCourses from "./Pages/MyCourses/MyCourses";
 import CreateCourse from "./Pages/CreateCourse/CreateCourse";
 import AddLecture from "./Pages/AddLecture/AddLecture";
+import SearchCourse from "./Pages/SearchCourse/SearchCourse";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -23,20 +24,21 @@ function App() {
 
   return (
     <div className="page-container">
-      {userInfo ? <NavHome /> : <NavMain />}
+     {userInfo ? <NavHome /> : <NavMain />}
       <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={Signup} />
-
+        
         <AuthRoute path="/home" component={Home} />
         <AuthRoute path="/course/:id" component={Course} />
         <AuthRoute path="/lesson/:id" component={CourseLecture} />
         <AuthRoute path="/mycourses" component={MyCourses} />
         <AuthRoute path="/createcourse" component={CreateCourse} />
         <AuthRoute path="/addlecture/:id" component={AddLecture} />
-
+        <AuthRoute path="/search" component={SearchCourse} />
+        
         <Route path="/" component={Main} />
-      </Switch>
+      </Switch> 
       <Footer />
     </div>
   );
