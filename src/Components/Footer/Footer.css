@@ -21,18 +21,10 @@
   display: flex;
   flex-direction: row;
 }
-.footer ul a {
+.footer ul i {
   padding: 0px 2px;
 }
-.facebook{
-  color: blue;
-}
-.instagram{
-  color: #5f2b81;
-}
-.twitter{
-  color:#00acee;
-}
+
 @media screen and (max-width: 958px) {
   .footer {
     padding: 0.8rem 0.8rem;
@@ -80,6 +72,20 @@
   .footer .social li i {
     font-size: 0.7rem;
   }
+}
+@media screen and (max-width: 557px){
+  /* Start Footer */
+  .footer {
+    padding: 0.3rem 0.4rem;
+  }
+  .footer p {
+    color: #7f8c8d;
+    font-size: 0.6rem;
+  }
+  .footer .social li i {
+    font-size: 0.7rem;
+  }
+  /*End Footer*/
 }
 
 @media screen and (max-width: 1042px) {
