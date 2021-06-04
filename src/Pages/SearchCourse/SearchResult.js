@@ -1,188 +1,38 @@
-import './SearchCourse.css';
+import RatingStars from "../../Components/Stars/RatingStars";
+import "./SearchCourse.css";
 
 const SearchResult = () => {
-    return ( 
-        
-        <div className="results-area">
-
-          <div className="box">
-
-            <div className="course-box">
-
-              <div className="thumbnail">
-                <img src="images/thumb.jpg" alt="thumbnail"/>
-              </div>
-
-              <div className="course-information">
-                <h3 className="course-name">Course name</h3>
-                <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-                
-                <div className="rating">
-                  <span className="out-of-five">3.7</span>
-                  <ul className="stars">
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star-half-alt"></i></li>
-                    <li><i className="far fa-star"></i></li>
-                  </ul>
-    
-                  <span className="rate"> (5,673)</span>
-                </div>
-                <span className="instructor-name">instructor name | </span>
-                <span className="lectures-of-course">20 lectures</span>
-              </div>
-            </div>
+  return (
+    <div className="results-area">
+      <div className="search-box">
+        <div className="course-box">
+          <div className="search-thumbnail">
+            <img
+              src="https://keytab-api.glitch.me/images/60aa4463578850058324acdc"
+              alt="thumbnail"
+            />
           </div>
-          <div className="box">
 
-            <div className="course-box">
+          <div className="search-course-information">
+            <h3 className="search-course-name">Course name</h3>
+            <p className="search-short-decription">
+              course descriptin course descriptin course descriptincourse
+              descriptincourse descriptincourse descriptincourse descriptin{" "}
+            </p>
 
-              <div className="thumbnail">
-                <img src="images/thumb.jpg" alt="thumbnail"/>
-              </div>
+            <div className="rating">
+              <span className="out-of-five">3.7</span>
+              <RatingStars rating={4} />
 
-              <div className="course-information">
-                <h3 className="course-name">Course name</h3>
-                <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-                
-                <div className="rating">
-                  <span className="out-of-five">3.7</span>
-                  <ul className="stars">
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star-half-alt"></i></li>
-                    <li><i className="far fa-star"></i></li>
-                  </ul>
-    
-                  <span className="rate"> (5,673)</span>
-                </div>
-                <span className="instructor-name">instructor name | </span>
-                <span className="lectures-of-course">20 lectures</span>
-              </div>
+              <span className="rate"> (5,673)</span>
             </div>
+            <span className="instructor-name">instructor name | </span>
+            <span className="lectures-of-course">20 lectures</span>
           </div>
-          <div className="box">
-
-            <div className="course-box">
-
-              <div className="thumbnail">
-                <img src="images/thumb.jpg" alt="thumbnail"/>
-              </div>
-
-              <div className="course-information">
-                <h3 className="course-name">Course name</h3>
-                <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-                
-                <div className="rating">
-                  <span className="out-of-five">3.7</span>
-                  <ul className="stars">
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star"></i></li>
-                    <li><i className="fas fa-star-half-alt"></i></li>
-                    <li><i className="far fa-star"></i></li>
-                  </ul>
-    
-                  <span className="rate"> (5,673)</span>
-                </div>
-                <span className="instructor-name">instructor name | </span>
-                <span className="lectures-of-course">20 lectures</span>
-              </div>
-            </div>
-          </div>
-          <div className="box">
-
-<div className="course-box">
-
-  <div className="thumbnail">
-    <img src="images/thumb.jpg" alt="thumbnail"/>
-  </div>
-
-  <div className="course-information">
-    <h3 className="course-name">Course name</h3>
-    <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-    
-    <div className="rating">
-      <span className="out-of-five">3.7</span>
-      <ul className="stars">
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star-half-alt"></i></li>
-        <li><i className="far fa-star"></i></li>
-      </ul>
-
-      <span className="rate"> (5,673)</span>
-    </div>
-    <span className="instructor-name">instructor name | </span>
-    <span className="lectures-of-course">20 lectures</span>
-  </div>
-</div>
-</div>
-<div className="box">
-
-<div className="course-box">
-
-  <div className="thumbnail">
-    <img src="images/thumb.jpg" alt="thumbnail"/>
-  </div>
-
-  <div className="course-information">
-    <h3 className="course-name">Course name</h3>
-    <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-    
-    <div className="rating">
-      <span className="out-of-five">3.7</span>
-      <ul className="stars">
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star-half-alt"></i></li>
-        <li><i className="far fa-star"></i></li>
-      </ul>
-
-      <span className="rate"> (5,673)</span>
-    </div>
-    <span className="instructor-name">instructor name | </span>
-    <span className="lectures-of-course">20 lectures</span>
-  </div>
-</div>
-</div>
-<div className="box">
-
-<div className="course-box">
-
-  <div className="thumbnail">
-    <img src="images/thumb.jpg" alt="thumbnail"/>
-  </div>
-
-  <div className="course-information">
-    <h3 className="course-name">Course name</h3>
-    <p className="short-decription">course descriptin course descriptin course descriptincourse descriptincourse descriptincourse descriptincourse descriptin </p>
-    
-    <div className="rating">
-      <span className="out-of-five">3.7</span>
-      <ul className="stars">
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star"></i></li>
-        <li><i className="fas fa-star-half-alt"></i></li>
-        <li><i className="far fa-star"></i></li>
-      </ul>
-
-      <span className="rate"> (5,673)</span>
-    </div>
-    <span className="instructor-name">instructor name | </span>
-    <span className="lectures-of-course">20 lectures</span>
-  </div>
-</div>
-</div>
-          
-
         </div>
-     );
-}
- 
+      </div>
+    </div>
+  );
+};
+
 export default SearchResult;

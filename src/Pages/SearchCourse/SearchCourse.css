@@ -1,322 +1,321 @@
-  /*srart Create course section*/
-  .container {
-    max-width: 80%;
-    margin: 3rem auto;
+/*srart Create course section*/
+.search-container {
+  max-width: 80%;
+  margin: 3rem auto;
+}
+.search-input {
+  width: 50%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.num-of-results {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1.3rem 0;
+  color: var(--sec-color);
+  text-transform: capitalize;
+}
+.filter {
+  display: flex;
+  justify-content: space-around;
+  width: 10%;
+  border: 1px solid var(--main-color);
+  padding: 0.5rem 3.5rem;
+  margin-bottom: 1.3rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.filter:hover {
+  color: #6d2805;
+}
+
+.filter p {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.second-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.filter-area {
+  width: 21%;
+  margin-right: 1rem;
+}
+
+.filter-area h4 {
+  margin-top: 12px;
+  padding: 1rem 0;
+  border-top: 1px solid rgb(182, 179, 179);
+}
+.results-area {
+  width: 78%;
+}
+
+.search-inputfield {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.search-inputfield .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.check input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--main-color);
+  display: block;
+  position: relative;
+  border-radius: 3px;
+}
+.check .checkmark:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.check input[type="checkbox"]:checked ~ .checkmark {
+  background: var(--main-color);
+}
+
+.check input[type="checkbox"]:checked ~ .checkmark:before {
+  display: block;
+}
+
+.search-inputfield p {
+  font-size: 16px;
+  color: var(--sec-color);
+  margin-left: 5px;
+}
+
+.custom_select {
+  position: relative;
+  width: 100%;
+  height: 2rem;
+}
+.custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+.custom_select select {
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.search-input:focus,
+.custom_select select:focus {
+  border: 1px solid var(--main-color);
+}
+
+.search-box {
+  margin: 0 0 1rem 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  border-bottom: solid 1px #dbd7d7;
+}
+.course-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-thumbnail {
+  width: 280px;
+  height: 130px;
+}
+.search-thumbnail img {
+  width: 280px;
+  height: 130px;
+}
+.search-course-information {
+  width: 70%;
+  padding: 0.2rem 0.8rem 0.8rem 0.8rem;
+}
+.search-course-information .search-course-name {
+  margin-bottom: 1rem;
+}
+.search-course-information .search-short-decription {
+  margin-bottom: 0.2rem;
+}
+.rating {
+  padding-bottom: 0.4rem;
+}
+.rating .out-of-five {
+  color: var(--fourth-color);
+  font-weight: bold;
+  margin-right: 0.1rem;
+}
+.rating .stars {
+  display: inline;
+  list-style: none;
+}
+.rating .stars li {
+  display: inline-block;
+}
+.rating .stars li i {
+  font-size: 0.8rem;
+  color: var(--fourth-color);
+}
+.rating .rate {
+  font-size: 12px;
+  color: var(--sec-color);
+  font-weight: 400;
+}
+.search-course-information .instructor-name,
+.search-course-information .lectures-of-course {
+  color: var(--ther-color);
+  font-size: 13px;
+}
+/* End sraech section*/
+
+/* media query */
+@media screen and (max-width: 1042px) {
+  /*start search section*/
+
+  .search-thumbnail {
+    width: 240px;
   }
-  .input {
-    width: 50%;
-    outline: none;
-    border: 1px solid #d5dbd9;
-    font-size: 1rem;
-    padding: 10px;
-    border-radius: 3px;
-    transition: all 0.3s ease;
+  .search-thumbnail img {
+    width: 240px;
   }
-  .num-of-results {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 1.3rem 0;
-    color: var(--sec-color);
-    text-transform: capitalize;
+  .search-course-information {
+    width: 70%;
+    padding: 1rem;
   }
-  .filter {
-    display: flex;
-    justify-content: space-around;
-    width: 10%;
-    border: 1px solid var(--main-color);
-    padding: 0.5rem 3.5rem;
-    margin-bottom: 1.3rem;
+  .search-course-information .search-course-name {
+    margin-bottom: 0.6rem;
+  }
+  .search-course-information .search-short-decription {
+    margin-bottom: 0rem;
+  }
+}
+@media screen and (max-width: 925px) {
+  .search-container {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+  .search-box {
+    margin: 0 0 0.5rem 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .search-thumbnail {
+    width: 210px;
+    height: 120px;
+  }
+  .search-thumbnail img {
+    width: 210px;
+    height: 120px;
+  }
+  .search-course-information {
+    width: 70%;
+    padding: 0 0 0 0.3rem;
+  }
+
+  /* End sraech section*/
+}
+
+@media screen and (max-width: 735px) {
+  .search-container {
+    max-width: 95%;
+    margin: 1.5rem auto;
+  }
+  .filter-area {
+    display: none;
+  }
+  .results-area {
+    width: 100%;
+  }
+  .search-box {
+    margin: 0 0 0.5rem 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .search-thumbnail {
+    width: 210px;
+    height: 120px;
+  }
+  .search-thumbnail img {
+    width: 210px;
+    height: 120px;
+  }
+  .search-course-information {
+    width: 70%;
+    padding: 0 0 0 0.3rem;
+  }
+
+  /* End sraech section*/
+}
+
+@media screen and (max-width: 465px) {
+  .search-container {
+    max-width: 96%;
+  }
+
+  .search-box {
+    margin: 0.6rem 0 0 0;
+    padding-bottom: 1rem;
+  }
+
+  .search-thumbnail {
+    width: 160px;
+    height: 100px;
+  }
+  .search-thumbnail img {
+    width: 160px;
+    height: 100px;
+  }
+  .search-course-information {
+    width: 70%;
+    padding: 0 0 0 0.3rem;
+  }
+  .search-course-information .search-short-decription {
+    display: none;
+  }
+  .search-course-information .search-course-name::after {
+    content: "Read more ..";
+    display: block;
+    font-size: 14px;
+    font-weight: lighter;
+    padding-top: 10px;
     color: var(--main-color);
     cursor: pointer;
   }
-  .filter:hover {
-    color: #6d2805;
-  }
-  
-  .filter p {
-    padding: 0 0.5rem;
-    font-weight: bold;
-  }
-  
-  .second-container {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .filter-area {
-    width: 21%;
-    margin-right: 1rem;
-  }
-  
-  .filter-area h4 {
-    margin-top: 12px;
-    padding: 1rem 0;
-    border-top: 1px solid rgb(182, 179, 179);
-  }
-  .results-area {
-    width: 78%;
-  }
-  
-  .inputfield {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .inputfield .check {
-    width: 15px;
-    height: 15px;
-    position: relative;
-    display: block;
-    cursor: pointer;
-  }
-  
-  .check input[type="checkbox"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  .check .checkmark {
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--main-color);
-    display: block;
-    position: relative;
-    border-radius: 3px;
-  }
-  .check .checkmark:before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 2px;
-    width: 5px;
-    height: 2px;
-    border: 2px solid;
-    border-color: transparent transparent #fff #fff;
-    transform: rotate(-45deg);
-    display: none;
-  }
-  .check input[type="checkbox"]:checked ~ .checkmark {
-    background: var(--main-color);
-  }
-  
-  .check input[type="checkbox"]:checked ~ .checkmark:before {
-    display: block;
-  }
-  
-  .inputfield p {
-    font-size: 16px;
-    color: var(--sec-color);
-    margin-left: 5px;
-  }
-  
-  .custom_select {
-    position: relative;
-    width: 100%;
-    height: 2rem;
-  }
-  .custom_select:before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    border: 8px solid;
-    border-color: #d5dbd9 transparent transparent transparent;
-    pointer-events: none;
-  }
-  .custom_select select {
-    appearance: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    padding: 8px 10px;
-    font-size: 1rem;
-    border: 1px solid #d5dbd9;
-    border-radius: 3px;
-  }
-  
-  .input:focus,
-  .custom_select select:focus {
-    border: 1px solid var(--main-color);
-  }
-  
-  .box {
-    margin: 0 0 1rem 1rem;
-    padding-bottom: 1rem;
-    width: 100%;
-    border-bottom: solid 1px #dbd7d7;
-  }
-  .course-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .thumbnail {
-    width: 280px;
-    height: 130px;
-  }
-  .thumbnail img {
-    width: 280px;
-    height: 130px;
-  }
-  .course-information {
-    width: 70%;
-    padding: 0.2rem 0.8rem 0.8rem 0.8rem;
-  }
-  .course-information .course-name {
-    margin-bottom: 1rem;
-  }
-  .course-information .short-decription {
-    margin-bottom: 0.2rem;
-  }
-  .rating {
-    padding-bottom: 0.4rem;
-  }
-  .rating .out-of-five {
-    color: var(--fourth-color);
-    font-weight: bold;
-    margin-right: 0.1rem;
-  }
-  .rating .stars {
-    display: inline;
-    list-style: none;
-  }
-  .rating .stars li {
-    display: inline-block;
-  }
-  .rating .stars li i {
-    font-size: 0.8rem;
-    color: var(--fourth-color);
-  }
-  .rating .rate {
-    font-size: 12px;
-    color: var(--sec-color);
-    font-weight: 400;
-  }
-  .course-information .instructor-name,
-  .course-information .lectures-of-course {
-    color: var(--ther-color);
-    font-size: 13px;
-  }
+
   /* End sraech section*/
-  
-  /* media query */
-  @media screen and (max-width: 1042px) {
-  
-    /*start search section*/
-  
-    .thumbnail {
-      width: 240px;
-    }
-    .thumbnail img {
-      width: 240px;
-    }
-    .course-information {
-      width: 70%;
-      padding: 1rem;
-    }
-    .course-information .course-name {
-      margin-bottom: 0.6rem;
-    }
-    .course-information .short-decription {
-      margin-bottom: 0rem;
-    }
-  }
-  @media screen and (max-width: 925px) {
-    .container {
-      max-width: 90%;
-      margin: 2rem auto;
-    }
-    .box {
-      margin: 0 0 0.5rem 0.5rem;
-      padding-bottom: 1.5rem;
-    }
-  
-    .thumbnail {
-      width: 210px;
-      height: 120px;
-    }
-    .thumbnail img {
-      width: 210px;
-      height: 120px;
-    }
-    .course-information {
-      width: 70%;
-      padding: 0 0 0 0.3rem;
-    }
-  
-    /* End sraech section*/
-  }
-  
-  @media screen and (max-width: 735px) {
-    .container {
-      max-width: 95%;
-      margin: 1.5rem auto;
-    }
-    .filter-area {
-      display: none;
-    }
-    .results-area {
-      width: 100%;
-    }
-    .box {
-      margin: 0 0 0.5rem 0.5rem;
-      padding-bottom: 1.5rem;
-    }
-  
-    .thumbnail {
-      width: 210px;
-      height: 120px;
-    }
-    .thumbnail img {
-      width: 210px;
-      height: 120px;
-    }
-    .course-information {
-      width: 70%;
-      padding: 0 0 0 0.3rem;
-    }
-  
-    /* End sraech section*/
-  }
-  
-  @media screen and (max-width: 465px) {
-    .container {
-      max-width: 96%;
-    }
-  
-    .box {
-      margin: 0.6rem 0 0 0;
-      padding-bottom: 1rem;
-    }
-  
-    .thumbnail {
-      width: 160px;
-      height: 100px;
-    }
-    .thumbnail img {
-      width: 160px;
-      height: 100px;
-    }
-    .course-information {
-      width: 70%;
-      padding: 0 0 0 0.3rem;
-    }
-    .course-information .short-decription {
-      display: none;
-    }
-    .course-information .course-name::after {
-      content: "Read more ..";
-      display: block;
-      font-size: 14px;
-      font-weight: lighter;
-      padding-top: 10px;
-      color: var(--main-color);
-      cursor: pointer;
-    }
-  
-    /* End sraech section*/
-  }
+}
