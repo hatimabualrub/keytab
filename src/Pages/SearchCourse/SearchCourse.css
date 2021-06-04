@@ -147,7 +147,12 @@
   padding-bottom: 1rem;
   width: 100%;
   border-bottom: solid 1px #dbd7d7;
+  cursor: pointer;
 }
+.search-box:hover {
+  background-color: #f1eee8;
+}
+
 .course-box {
   display: flex;
   flex-direction: row;

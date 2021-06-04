@@ -63,7 +63,7 @@
 }
 .course-header .img img {
   width: 90%;
-  /* height: 12rem; */
+  height: 12rem;
   object-fit: cover;
   border: 2px solid #ffffff;
 }

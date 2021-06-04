@@ -1,10 +1,10 @@
-const FilterGradeLevel = () => {
+const FilterGradeLevel = ({ setGradeLevel }) => {
   return (
     <>
       <h4>Grade Level</h4>
       <div className="search-inputfield">
         <div className="custom_select">
-          <select>
+          <select onChange={(e) => setGradeLevel(parseInt(e.target.value))}>
             <option value="">Select</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -15,6 +15,7 @@ const FilterGradeLevel = () => {
             <option value="7">7</option>
             <option value="8">8</option>
             <option value="9">9</option>
+            <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
           </select>

@@ -22,6 +22,9 @@ import {
   GET_ENROLLED_COURSES_FAIL,
   GET_ENROLLED_COURSES_REQUEST,
   GET_ENROLLED_COURSES_SUCCESS,
+  SEARCH_COURSE_FAIL,
+  SEARCH_COURSE_REQUEST,
+  SEARCH_COURSE_SUCCESS,
 } from "../constants/courseConstants";
 
 export const getCoursesHome = (subject) => async (dispatch, getState) => {
@@ -198,3 +201,39 @@ export const createCourse = (course, image) => async (dispatch, getState) => {
     });
   }
 };
+
+export const searchCourses =
+  (title, subject, gradeLevel) => async (dispatch, getState) => {
+    dispatch({ type: SEARCH_COURSE_REQUEST });
+    const {
+      userSignin: {
+        userInfo: { token },
+      },
+    } = getState();
+
+    let query = `title=${title}`;
+    if (subject) {
+      query += `&subject=${subject}`;
+    }
+    if (gradeLevel) {
+      query += `&gradeLevel=${gradeLevel}`;
+    }
+
+    try {
+      const { data } = await axios.get(`/courses/view/all?${query}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      dispatch({ type: SEARCH_COURSE_SUCCESS, payload: data });
+    } catch (e) {
+      dispatch({
+        type: SEARCH_COURSE_FAIL,
+        payload:
+          e.response && e.response.data.message
+            ? e.response.data.message
+            : e.message,
+      });
+    }
+  };

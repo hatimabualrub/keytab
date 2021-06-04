@@ -82,6 +82,7 @@
   width: 10%;
   position: relative;
   margin-right: 10rem;
+  cursor: pointer;
 }
 
 .nav .buttons #items {

@@ -22,6 +22,9 @@ import {
   GET_ENROLLED_COURSES_FAIL,
   GET_ENROLLED_COURSES_REQUEST,
   GET_ENROLLED_COURSES_SUCCESS,
+  SEARCH_COURSE_FAIL,
+  SEARCH_COURSE_REQUEST,
+  SEARCH_COURSE_SUCCESS,
 } from "../constants/courseConstants";
 
 export const getCoursesHomeReducer = (
@@ -123,6 +126,19 @@ export const createCourseReducer = (state = {}, action) => {
       return { loading: false, error: action.payload };
     case CREATE_COURSE_RESET:
       return {};
+    default:
+      return state;
+  }
+};
+
+export const searchCourseReducer = (state = {}, action) => {
+  switch (action.type) {
+    case SEARCH_COURSE_REQUEST:
+      return { loading: true };
+    case SEARCH_COURSE_SUCCESS:
+      return { loading: false, courses: action.payload };
+    case SEARCH_COURSE_FAIL:
+      return { loading: false, error: action.payload };
     default:
       return state;
   }

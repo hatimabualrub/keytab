@@ -14,7 +14,7 @@ const Nav = () => {
       <div className="logo" onClick={redirectHome}>
         <img draggable="false" src={Logo} alt="Logo" />
       </div>
-      <div className="search">
+      <div className="search" onClick={() => history.push("/search")}>
         <i className="fas fa-search"></i>
         <input
           type="search"
