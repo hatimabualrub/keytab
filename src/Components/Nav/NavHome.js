@@ -1,38 +1,83 @@
 import "./NavHome.css";
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import Logo from "../../images/Logo.PNG";
 import { useHistory } from "react-router";
 import { Link, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { USER_RESET } from "../../constants/userConstants";
 
 const Nav = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const redirectHome = () => {
     history.push("/home");
   };
 
-  function logOut(){
+  function logOut() {
     localStorage.clear();
-    history.push('/');
+    dispatch({ type: USER_RESET });
   }
 
   const [viewMenu, setViewMenu] = useState(false);
   return (
     <div className="nav">
-    {viewMenu && <div className="burger-menu">
-                      <div className="menu-container">
-                          <div className="presonal-info-box">
-                              <img src="images/profile.png" alt="profile picture" />
-                              <ul className="personal-data-settings">
-                                    <li><Link to='/mycourses' style={{color:"black"} } ><i className="far fa-address-card" style={{color:"var(--main-color)"}}></i> Profile </Link></li>
-                                    <li><Link to='/mycourses' style={{color:"black"} } ><i className="fas fa-chalkboard-teacher" style={{color:"var(--main-color)"}}></i> Enrolled courses </Link></li>
-                                    <li><Link to='/mycourses' style={{color:"black"} } ><i className="fas fa-child" style={{color:"var(--main-color)"}}></i> Created courses</Link></li>
-                                    <li><Link to='/mycourses' style={{color:"black"} } ><i className="fas fa-cog" style={{color:"var(--main-color)"}}></i> Settings</Link></li>
-                                    <li onClick={logOut}><Link to='/mycourses' style={{color:"black"} } ><i className="fas fa-sign-out-alt" style={{color:"var(--main-color)"}}></i> Log out</Link></li>
-                              </ul>
-                          </div>
-                      </div>
-                    </div>}
+      {viewMenu && (
+        <div className="burger-menu">
+          <div className="menu-container">
+            <div className="presonal-info-box">
+              <img src="images/profile.png" alt="profile picture" />
+              <ul className="personal-data-settings">
+                <li>
+                  <Link to="/mycourses" style={{ color: "black" }}>
+                    <i
+                      className="far fa-address-card"
+                      style={{ color: "var(--main-color)" }}
+                    ></i>{" "}
+                    Profile{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mycourses" style={{ color: "black" }}>
+                    <i
+                      className="fas fa-chalkboard-teacher"
+                      style={{ color: "var(--main-color)" }}
+                    ></i>{" "}
+                    Enrolled courses{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mycourses" style={{ color: "black" }}>
+                    <i
+                      className="fas fa-child"
+                      style={{ color: "var(--main-color)" }}
+                    ></i>{" "}
+                    Created courses
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/mycourses" style={{ color: "black" }}>
+                    <i
+                      className="fas fa-cog"
+                      style={{ color: "var(--main-color)" }}
+                    ></i>{" "}
+                    Settings
+                  </Link>
+                </li>
+                <li onClick={logOut}>
+                  <Link to="/mycourses" style={{ color: "black" }}>
+                    <i
+                      className="fas fa-sign-out-alt"
+                      style={{ color: "var(--main-color)" }}
+                    ></i>{" "}
+                    Log out
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="logo" onClick={redirectHome}>
         <img draggable="false" src={Logo} alt="Logo" />
@@ -69,10 +114,16 @@ const Nav = () => {
           </li>
         </ul>
         <div className="bar">
-          <i id="bar" className="fas fa-bars" onClick={() =>{setViewMenu(!viewMenu)}}></i>
+          <i
+            id="bar"
+            className="fas fa-bars"
+            onClick={() => {
+              setViewMenu(!viewMenu);
+            }}
+          ></i>
         </div>
       </div>
-    </div> 
+    </div>
   );
 };
 

@@ -104,67 +104,6 @@
   cursor: pointer;
 }
 
-/* start background area*/
-
-.content-area {
-  width: 550px;
-  height: 380px;
-  background-color: white;
-  border-radius: 4px;
-  text-align: center;
-  padding: 30px;
-  position: relative;
-}
-.close {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  font-size: 40px;
-  transform: rotate(45deg);
-  cursor: pointer;
-  user-select: none;
-}
-.content-area img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-}
-form .student-rate .stars i {
-  cursor: pointer;
-}
-form .student-rate .stars i:hover {
-  color: var(--main-color);
-}
-.student-rate {
-  margin-bottom: 1rem;
-}
-
-.your-review {
-  width: 100%;
-  height: 8rem;
-  resize: none;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-.submit-your-review {
-  margin: 1rem 0;
-  background-color: var(--main-color);
-  border: 0;
-  color: #ffffff;
-  width: 40%;
-  height: 30px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  font-weight: 500;
-}
-/* End background area*/
-
 .reviews .review .profile-img {
   width: 5%;
   margin: 0 2rem;
