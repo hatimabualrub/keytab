@@ -1,5 +1,5 @@
 import { Link, useHistory } from "react-router-dom";
-
+import React, {useState} from "react";
 import "./NavMain.css";
 import Logo from "../../images/Logo.PNG";
 
@@ -9,7 +9,23 @@ const Nav = () => {
   const redirectHome = () => {
     history.push("/");
   };
+
+  const [viewMenu, setViewMenu] = useState(false);
+
   return (
+    <>
+    {viewMenu && <div className="burger-menu">
+                      <div className="menu-container">
+                          <div className="presonal-info-box">
+                              <ul className="personal-data-settings">
+                                    <li><Link to='/signup' style={{color:"black"} } ><i className="fas fa-user-plus" style={{color:"var(--main-color)"}}></i>  Sign up </Link></li>
+                                    <li><Link to='/login' style={{color:"black"} } ><i className="fas fa-sign-in-alt" style={{color:"var(--main-color)"}}></i>  Log in </Link></li>
+                              </ul>
+                          </div>
+                      </div>
+                    </div>}
+
+
     <div className="nav">
       <div className="logo" onClick={redirectHome}>
         <img draggable="false" src={Logo} alt="Logo" />
@@ -39,10 +55,11 @@ const Nav = () => {
           </li>
         </ul>
         <div className="bar mobile">
-          <i id="bar" className="fas fa-bars"></i>
+          <i id="bar" className="fas fa-bars" onClick={()=>{setViewMenu(!viewMenu)}}></i>
         </div>
       </div>
     </div>
+    </>
   );
 };
 
