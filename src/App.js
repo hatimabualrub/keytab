@@ -21,10 +21,11 @@ import SearchCourse from "./Pages/SearchCourse/SearchCourse";
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-
+  
   return (
     <div className="page-container">
      {userInfo ? <NavHome /> : <NavMain />}
+
       <Switch>
         <Route path="/login" component={LogIn} />
         <Route path="/signup" component={Signup} />
@@ -38,7 +39,7 @@ function App() {
         <AuthRoute path="/search" component={SearchCourse} />
         
         <Route path="/" component={Main} />
-      </Switch> 
+      </Switch>
       <Footer />
     </div>
   );

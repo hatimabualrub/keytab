@@ -226,6 +226,9 @@
   .nav .buttons #items li {
     font-size: 1.1rem;
   }
+  .burger-menu {
+    top: 58px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -292,6 +295,10 @@
     margin-left: 0.9rem;
     font-size: 1.2rem;
   }
+  /* start burger box */
+  .burger-menu {
+    top: 66px;
+  }
 }
 
 @media screen and (max-width: 735px) {
@@ -317,6 +324,10 @@
   }
   .nav .buttons .bar i {
     font-size: 1.3rem;
+  }
+  /* start burger box */
+  .burger-menu {
+    top: 53px;
   }
 }
 
@@ -372,5 +383,9 @@
   }
   .nav .buttons .bar i {
     font-size: 1.5rem;
+  }
+  /* start burger box */
+  .burger-menu {
+    top: 53px;
   }
 }
