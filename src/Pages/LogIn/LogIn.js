@@ -17,7 +17,8 @@ const LogIn = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const onSigninRequest = () => {
+  const onSigninRequest = (e) => {
+    e.preventDefault();
     dispatch(requestSignin(email, password));
   };
 
@@ -30,40 +31,53 @@ const LogIn = () => {
     }
   }, [userInfo, history, error]);
 
+  
   return (
-    <div className="login">
-      {loading && <Spinner />}
-      <h1>Log in</h1>
-      <p>
-        Don't have an account yet? <Link to='signup'><span >Sign up</span></Link>
-      </p>
-      <label>Email</label>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setemail(e.target.value)}
-      />
-      <label>Password</label>
-      <div className="eye">
-        <input
-          type={showPassword ? "text" : "password"}
+    <div className="wrapper">
+    {loading && <Spinner />}
+      <div className="title"> Log in</div>
+      <form   className="form">   
+        <div className="inputfield">
+          <label>Email </label>
+          <input 
+          type="text" 
+          className="input"
+          placeholder="Enter your email" 
+          value={email}
+          onChange={(e)=>setemail(e.target.value)}
+          />
+        </div> 
+          
+        <div className="inputfield">
+          <label>Password</label>
+          <input 
+          type="password" 
+          className="input" 
           placeholder="Enter your password"
           value={password}
-          onChange={(e) => setpassword(e.target.value)}
-        />
-        <i 
-        className="fas fa-eye"
-        onClick={() => setShowPassword(prevState => !prevState)}></i>
-      </div>
-      <div className="para hidden">
-        <p>
-          By signing up you agree to our <span>Terms</span> and{" "}
-          <span>Privacy policy</span>
-        </p>
-      </div>
-      <button onClick={onSigninRequest}>Log in</button>
-    </div>
+          onChange={(e)=>setpassword(e.target.value)}
+          />
+        </div>  
+        <a className="forget" href="\">Forgot your password?</a>
+
+        <div className="inputfield terms">
+          <label className="check">
+            <input type="checkbox" />
+            <span className="checkmark"></span>
+          </label>
+          <p>I trust this device. Keep me logged in.</p>
+        </div> 
+            
+        <div className="inputfield">
+          <input 
+          type="submit" 
+          value="Log in" 
+          className="btn" 
+          onClick={(e)=> onSigninRequest(e)}
+          />
+        </div>
+      </form>
+  </div>
   );
 };
 
