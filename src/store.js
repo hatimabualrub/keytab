@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import {
+  addReviewReducer,
   courseEnrollmentReducer,
   courseInfoReducer,
   courseReviewsReducer,
@@ -39,6 +40,7 @@ const reducer = combineReducers({
   createCourse: createCourseReducer,
   addLesson: addLessonReducer,
   searchCourse: searchCourseReducer,
+  addReview: addReviewReducer,
 });
 
 const store = createStore(reducer, initialState, applyMiddleware(thunk));

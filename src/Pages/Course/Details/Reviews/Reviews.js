@@ -7,7 +7,7 @@ import Review from "./Review";
 import { getCourseReviews } from "../../../../actions/courseActions";
 import AddReview from "./AddReview";
 
-const Reviews = ({ courseId }) => {
+const Reviews = ({ courseId, userState }) => {
   const [showAddReview, setShowAddReview] = useState(false);
   const courseReviews = useSelector((state) => state.courseReviews);
   const { reviews } = courseReviews;
@@ -22,9 +22,11 @@ const Reviews = ({ courseId }) => {
     <div className="reviews box">
       <div className="box-header">
         <h2>Reviews</h2>
-        <div className="add-review">
-          <span onClick={() => setShowAddReview(true)}>Add your review</span>
-        </div>
+        {userState.isUserEnrolled && (
+          <div className="add-review">
+            <span onClick={() => setShowAddReview(true)}>Add your review</span>
+          </div>
+        )}
       </div>
       <AddReview show={showAddReview} setShow={setShowAddReview} />
       {reviews && reviews.length > 0 ? null : <h2>No Reviews Yet</h2>}

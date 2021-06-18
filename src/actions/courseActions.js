@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  ADD_REVIEW_FAIL,
+  ADD_REVIEW_REQUEST,
+  ADD_REVIEW_SUCCESS,
   CREATE_COURSE_FAIL,
   CREATE_COURSE_REQUEST,
   CREATE_COURSE_SUCCESS,
@@ -237,3 +240,28 @@ export const searchCourses =
       });
     }
   };
+
+export const addCourseReview = (request) => async (dispatch, getState) => {
+  dispatch({ type: ADD_REVIEW_REQUEST });
+  const {
+    userSignin: {
+      userInfo: { token },
+    },
+  } = getState();
+  try {
+    await axios.post("/courses/review", request, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    dispatch({ type: ADD_REVIEW_SUCCESS });
+  } catch (e) {
+    dispatch({
+      type: ADD_REVIEW_FAIL,
+      payload:
+        e.response && e.response.data.message
+          ? e.response.data.message
+          : e.message,
+    });
+  }
+};

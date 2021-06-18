@@ -1,4 +1,7 @@
 import {
+  ADD_REVIEW_FAIL,
+  ADD_REVIEW_REQUEST,
+  ADD_REVIEW_SUCCESS,
   CREATE_COURSE_FAIL,
   CREATE_COURSE_REQUEST,
   CREATE_COURSE_RESET,
@@ -138,6 +141,19 @@ export const searchCourseReducer = (state = {}, action) => {
     case SEARCH_COURSE_SUCCESS:
       return { loading: false, courses: action.payload };
     case SEARCH_COURSE_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const addReviewReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ADD_REVIEW_REQUEST:
+      return { loading: true };
+    case ADD_REVIEW_SUCCESS:
+      return { loading: false, success: true };
+    case ADD_REVIEW_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

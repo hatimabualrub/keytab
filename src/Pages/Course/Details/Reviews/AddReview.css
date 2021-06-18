@@ -15,7 +15,7 @@
 }
 .content-area {
   width: 550px;
-  height: 380px;
+  height: 395px;
   background-color: white;
   border-radius: 4px;
   text-align: center;
@@ -71,3 +71,23 @@ form .student-rate .stars i:hover {
   font-weight: 500;
 }
 /* End background area*/
+
+.add-rate li {
+  margin-left: 0.25em;
+  margin-right: 0.25rem;
+}
+
+.rate-error {
+  width: 30%;
+  min-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ff0033;
+  border-radius: 5px;
+}
+
+.rate-error-message {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: #ff0033;
+}
