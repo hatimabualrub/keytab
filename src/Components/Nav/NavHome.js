@@ -26,15 +26,14 @@ const Nav = () => {
         <div className="burger-menu">
           <div className="menu-container">
             <div className="presonal-info-box">
-              <img src="images/profile.png" alt="profile picture" />
               <ul className="personal-data-settings">
-                <li>
-                  <Link to="/mycourses" style={{ color: "black" }}>
+                <li> 
+                  <Link to="/home" style={{ color: "black" }}>
                     <i
-                      className="far fa-address-card"
-                      style={{ color: "var(--main-color)" }}
+                    className="fas fa-home"
+                    style={{ color: "var(--main-color)" }}
                     ></i>{" "}
-                    Profile{" "}
+                    Home
                   </Link>
                 </li>
                 <li>
@@ -43,29 +42,20 @@ const Nav = () => {
                       className="fas fa-chalkboard-teacher"
                       style={{ color: "var(--main-color)" }}
                     ></i>{" "}
-                    Enrolled courses{" "}
+                    My courses{" "}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/mycourses" style={{ color: "black" }}>
+                  <Link to="/search" style={{ color: "black" }}>
                     <i
-                      className="fas fa-child"
+                      className="fas fa-search"
                       style={{ color: "var(--main-color)" }}
                     ></i>{" "}
-                    Created courses
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/mycourses" style={{ color: "black" }}>
-                    <i
-                      className="fas fa-cog"
-                      style={{ color: "var(--main-color)" }}
-                    ></i>{" "}
-                    Settings
+                    Search courses
                   </Link>
                 </li>
                 <li onClick={logOut}>
-                  <Link to="/mycourses" style={{ color: "black" }}>
+                  <Link to="/" style={{ color: "black" }}>
                     <i
                       className="fas fa-sign-out-alt"
                       style={{ color: "var(--main-color)" }}
