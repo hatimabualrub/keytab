@@ -149,7 +149,6 @@
 
 /*media */
 
-
 @media screen and (max-width: 1042px) {
   .login {
     position: absolute;
@@ -201,7 +200,6 @@
 }
 
 @media screen and (max-width: 991px) {
-
   .login i {
     bottom: 6.2rem;
     right: 1.2px;
@@ -211,7 +209,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  
   .login i {
     bottom: 7.1rem;
     right: 1.2px;
@@ -270,4 +267,11 @@
     padding: 10px;
     font-size: 1.2rem;
   }
+}
+
+p.auth-error {
+  color: #ff0033;
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }

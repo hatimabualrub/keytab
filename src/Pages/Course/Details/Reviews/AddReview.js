@@ -51,7 +51,7 @@ const AddReview = ({ show, setShow }) => {
         <div className="close" onClick={() => setShow(false)}>
           +
         </div>
-        <img src={image} alt="profile picture" />
+        <img src={image} alt="profile" />
         <form onSubmit={submitHandler}>
           <div className="student-rate">
             <ul
