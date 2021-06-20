@@ -40,7 +40,7 @@ const CourseCard = ({ course }) => {
         <br />
         <p>{course.instructor}</p>
         <div className="rating">
-          <span>{course.enrollments.rateValue}</span>
+          <span>{course.enrollments.rateValue.toFixed(1)}</span>
           <RatingStars rating={course.enrollments.rateValue} />
 
           <span className="rate"> ({course.enrollments.rateCount})</span>

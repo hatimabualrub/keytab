@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
@@ -17,6 +18,8 @@ import MyCourses from "./Pages/MyCourses/MyCourses";
 import CreateCourse from "./Pages/CreateCourse/CreateCourse";
 import AddLecture from "./Pages/AddLecture/AddLecture";
 import SearchCourse from "./Pages/SearchCourse/SearchCourse";
+
+axios.defaults.baseURL = "https://keytab-api.glitch.me";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);

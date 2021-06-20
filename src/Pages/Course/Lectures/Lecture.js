@@ -12,7 +12,10 @@ const Lecture = ({ lesson }) => {
     <div className="lecture-box" onClick={lectureClickHandler}>
       <div className="lecture">
         <div className="thumbnail">
-          <img src={"/images/" + lesson._id} alt="thumbnail" />
+          <img
+            src={"https://keytab-api.glitch.me/images/" + lesson._id}
+            alt="thumbnail"
+          />
         </div>
         <div className="lecture-information">
           <h3>

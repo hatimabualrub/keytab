@@ -34,15 +34,16 @@ const LogIn = () => {
       <div className="title"> Log in</div>
       {error && <p className="auth-error">{error}</p>}
 
-      <form className="form">
+      <form className="form" onSubmit={(e) => onSigninRequest(e)}>
         <div className="inputfield">
           <label>Email </label>
           <input
-            type="text"
+            type="email"
             className="input"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setemail(e.target.value)}
+            required
           />
         </div>
 
@@ -54,6 +55,7 @@ const LogIn = () => {
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setpassword(e.target.value)}
+            required
           />
         </div>
         <a className="forget" href="\">
@@ -69,12 +71,7 @@ const LogIn = () => {
         </div>
 
         <div className="inputfield">
-          <input
-            type="submit"
-            value="Log in"
-            className="btn"
-            onClick={(e) => onSigninRequest(e)}
-          />
+          <input type="submit" value="Log in" className="btn" />
         </div>
       </form>
     </div>

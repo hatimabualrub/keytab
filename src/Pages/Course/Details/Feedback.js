@@ -9,7 +9,7 @@ const Feedback = ({ enrollments }) => {
       <h2>Student feedback</h2>
       <div className="course-rating">
         <div className="student-rate">
-          <span>{enrollments.rateValue}</span>
+          <span>{enrollments.rateValue.toFixed(1)}</span>
           <RatingStars rating={enrollments.rateValue} />
           <span>Course Rating</span>
         </div>

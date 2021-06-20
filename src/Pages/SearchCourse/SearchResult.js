@@ -22,7 +22,9 @@ const SearchResult = ({ course }) => {
           <p className="search-short-decription">{course.course.description}</p>
 
           <div className="rating">
-            <span className="out-of-five">{course.enrollments.rateValue}</span>
+            <span className="out-of-five">
+              {course.enrollments.rateValue.toFixed(1)}
+            </span>
             <RatingStars rating={course.enrollments.rateValue} />
 
             <span className="rate">({course.enrollments.rateCount})</span>

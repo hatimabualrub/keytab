@@ -9,7 +9,7 @@ const Header = (props) => {
         <h2>{course.title}</h2>
         <p>{course.description}</p>
         <div className="rating">
-          <span className="number">{enrollments.rateValue}</span>
+          <span className="number">{enrollments.rateValue.toFixed(1)}</span>
           <RatingStars rating={enrollments.rateValue} />
           <span className="rate">
             {" "}

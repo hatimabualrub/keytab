@@ -37,7 +37,7 @@ const SignIn = () => {
       {loading && <Spinner />}
       <div className="title"> Sign Up</div>
       {error && <p className="auth-error">{error}</p>}
-      <form className="form">
+      <form className="form" onSubmit={(e) => onSignupRequest(e)}>
         <div className="inputfield">
           <label>Full Name</label>
           <input
@@ -46,17 +46,19 @@ const SignIn = () => {
             placeholder="Enter your full name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
 
         <div className="inputfield">
           <label>Email Address</label>
           <input
-            type="text"
+            type="email"
             className="input"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -68,15 +70,7 @@ const SignIn = () => {
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <div className="inputfield">
-          <label>Confirm Password</label>
-          <input
-            type="password"
-            className="input"
-            placeholder="Enter your password again"
+            required
           />
         </div>
 
@@ -103,12 +97,7 @@ const SignIn = () => {
         </div>
 
         <div className="inputfield">
-          <input
-            type="submit"
-            value="Sign up"
-            className="btn"
-            onClick={(e) => onSignupRequest(e)}
-          />
+          <input type="submit" value="Sign up" className="btn" />
         </div>
       </form>
     </div>

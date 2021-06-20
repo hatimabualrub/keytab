@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Main.css";
 
 const Mid = () => {
@@ -12,9 +13,9 @@ const Mid = () => {
           best instructors in Jordan and Middle East.
         </p>
         <div className="btn">
-          <a href="/" className="big-btn">
+          <Link to="/signup" className="big-btn">
             Join For Free
-          </a>
+          </Link>
         </div>
       </div>
     </div>

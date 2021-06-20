@@ -27,11 +27,11 @@ const Nav = () => {
           <div className="menu-container">
             <div className="presonal-info-box">
               <ul className="personal-data-settings">
-                <li> 
+                <li>
                   <Link to="/home" style={{ color: "black" }}>
                     <i
-                    className="fas fa-home"
-                    style={{ color: "var(--main-color)" }}
+                      className="fas fa-home"
+                      style={{ color: "var(--main-color)" }}
                     ></i>{" "}
                     Home
                   </Link>

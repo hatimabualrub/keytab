@@ -20,11 +20,12 @@ const Subject = (props) => {
       <h1>{props.name}</h1>
 
       <div className="courses">
-        {courses.length > 0
-          ? courses.map((course, index) => (
-              <CourseCard key={index} course={course} />
-            ))
-          : null}
+        {courses &&
+          (courses.length > 0
+            ? courses.map((course, index) => (
+                <CourseCard key={index} course={course} />
+              ))
+            : null)}
       </div>
     </div>
   );
